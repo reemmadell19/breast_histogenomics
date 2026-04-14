@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+conch_mean,conch,mean,0.631096442977631,0.008950566683170715,0.623250925365671,0.6389419605895911,0.18518518518518517,0.1188118811881188,5

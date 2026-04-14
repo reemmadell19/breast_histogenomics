@@ -1,0 +1,21 @@
+{
+  "dataset": "fold_3",
+  "n_samples": 128,
+  "n_valid_samples": 128,
+  "mean_entropy": 5.889904286712408,
+  "std_entropy": 1.1868951340066447,
+  "mean_gini": 0.7583180921516257,
+  "std_gini": 0.16500663310475447,
+  "mean_spatial_coherence": 0.9652880658496693,
+  "std_spatial_coherence": 0.04712768867568698,
+  "mean_top_10_mass": 0.17084581416565925,
+  "std_top_10_mass": 0.14588295753191222,
+  "saved_as_pdf": true,
+  "wsi_overlays_created": true,
+  "correct_mean_entropy": 5.818920734950474,
+  "correct_mean_coherence": 0.9655311780599761,
+  "n_correct": 105,
+  "incorrect_mean_entropy": 6.21395963171254,
+  "incorrect_mean_coherence": 0.9641782057591378,
+  "n_incorrect": 23
+}

@@ -1,0 +1,52 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-28 12:41:47
+Results Directory: results_regression/regression_mil_mean_mse_balanced/resnet18
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: resnet18
+MIL Architecture: Mean Pooling
+Input Dimension: 512
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: mse
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: resnet18
+MIL Architecture: Mean Pooling
+Input Dimension: 512
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.6440
+  RMSE: 12.0343
+  MAE: 9.2482
+  R²: -0.0638
+  Spearman ρ: 0.1668
+  Binary Accuracy: 0.7573
+  F1-Score: 0.4186
+  Boundary MAE: 4.4315
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.6440
+  RMSE: 12.0343
+  MAE: 9.2482
+  R²: -0.0638
+  Spearman ρ: 0.1668
+  Binary Accuracy: 0.7573
+  F1-Score: 0.4186
+  Boundary MAE: 4.4315
+
+All results saved to: results_regression/regression_mil_mean_mse_balanced/resnet18
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

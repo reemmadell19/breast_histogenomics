@@ -1,0 +1,21 @@
+slide_id,error,RS_score,RS_category,visualization_category,data_format,data_source
+UCH_BRCA_RS_493 (2),No patches found,18.0,L,misclassified,tfrecord,UCMC
+63,No patches found,42.0,H,correct_high_risk,h5,BCR_NET
+12,No patches found,26.0,H,misclassified,h5,BCR_NET
+42,No patches found,6.0,L,misclassified,h5,BCR_NET
+UCH_BRCA_RS_305,No patches found,9.0,L,misclassified,tfrecord,UCMC
+UCH_BRCA_RS_504,No patches found,29.0,H,correct_high_risk,tfrecord,UCMC
+62,No patches found,16.0,L,misclassified,h5,BCR_NET
+UCH_BRCA_RS_488,No patches found,18.0,L,misclassified,tfrecord,UCMC
+UCH_BRCA_RS_158,No patches found,28.0,H,misclassified,tfrecord,UCMC
+72,No patches found,14.0,L,correct_low_risk,h5,BCR_NET
+UCH_BRCA_RS_465,No patches found,67.0,H,correct_high_risk,tfrecord,UCMC
+UCH_BRCA_RS_92,No patches found,27.0,H,correct_high_risk,tfrecord,UCMC
+UCH_BRCA_RS_47,No patches found,24.0,L,correct_low_risk,tfrecord,UCMC
+UCH_BRCA_RS_368,No patches found,4.0,L,correct_low_risk,tfrecord,UCMC
+14,No patches found,34.0,H,misclassified,h5,BCR_NET
+4,No patches found,3.0,L,misclassified,h5,BCR_NET
+24,No patches found,28.0,H,correct_high_risk,h5,BCR_NET
+32,No patches found,13.0,L,correct_low_risk,h5,BCR_NET
+UCH_BRCA_RS_21,No patches found,22.0,L,correct_low_risk,tfrecord,UCMC
+96,No patches found,6.0,L,correct_low_risk,h5,BCR_NET

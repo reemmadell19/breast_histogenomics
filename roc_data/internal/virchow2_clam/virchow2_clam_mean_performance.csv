@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+virchow2_clam,virchow2,clam,0.7902456912357902,0.04274798440712011,0.752775430813905,0.8277159516576755,0.4444444444444444,0.504950495049505,5

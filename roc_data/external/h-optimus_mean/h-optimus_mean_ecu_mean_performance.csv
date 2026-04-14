@@ -1,0 +1,2 @@
+Model,Dataset,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+h-optimus_mean,ECU,h-optimus,mean,0.75989010989011,0.05056372893847147,0.7155690473300101,0.8042111724502098,0.3333333333333333,0.5494505494505495,5

@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+h-optimus_clam,h-optimus,clam,0.8148148148148149,0.019188082804475433,0.7979957186714037,0.831633910958226,0.4444444444444444,0.6039603960396039,5

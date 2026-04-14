@@ -1,0 +1,241 @@
+{
+  "model_folder": "results_classification_cv_updated/virchow2_mean_20250915_004613",
+  "test_csv": "data/manifests/ecu_features_virchow2.csv",
+  "dataset": "ECU",
+  "n_test_samples": 212,
+  "n_low_risk": 182,
+  "n_high_risk": 30,
+  "class_imbalance_ratio": 6.066666666666666,
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "best_epoch": 2,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": 0.0,
+      "specificity": 1.0,
+      "npv": 0.8584905660377359,
+      "ppv": 0.0,
+      "mcc": 0.0,
+      "auroc": 0.7135531135531136,
+      "auc_pr": 0.24751219717156844,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "best_epoch": 2,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5278388278388279,
+      "precision": 0.5,
+      "recall": 0.06666666666666667,
+      "sensitivity": 0.06666666666666667,
+      "f1_score": 0.11764705882352941,
+      "cohen_kappa": 0.08725602755453499,
+      "specificity": 0.989010989010989,
+      "npv": 0.8653846153846154,
+      "ppv": 0.5,
+      "mcc": 0.14263154912324713,
+      "auroc": 0.697069597069597,
+      "auc_pr": 0.237306195756735,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "best_epoch": 2,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5278388278388279,
+      "precision": 0.5,
+      "recall": 0.06666666666666667,
+      "sensitivity": 0.06666666666666667,
+      "f1_score": 0.11764705882352941,
+      "cohen_kappa": 0.08725602755453499,
+      "specificity": 0.989010989010989,
+      "npv": 0.8653846153846154,
+      "ppv": 0.5,
+      "mcc": 0.14263154912324713,
+      "auroc": 0.7067765567765567,
+      "auc_pr": 0.29543076183966244,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "best_epoch": 2,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": 0.0,
+      "specificity": 1.0,
+      "npv": 0.8584905660377359,
+      "ppv": 0.0,
+      "mcc": 0.0,
+      "auroc": 0.6902930402930403,
+      "auc_pr": 0.27927311123522597,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "best_epoch": 2,
+      "accuracy": 0.839622641509434,
+      "balanced_accuracy": 0.5307692307692308,
+      "precision": 0.3,
+      "recall": 0.1,
+      "sensitivity": 0.1,
+      "f1_score": 0.15,
+      "cohen_kappa": 0.08527918781725896,
+      "specificity": 0.9615384615384616,
+      "npv": 0.8663366336633663,
+      "ppv": 0.3,
+      "mcc": 0.10117361579547425,
+      "auroc": 0.7371794871794872,
+      "auc_pr": 0.30514339203552215,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.7089743589743589,
+      "std": 0.01811104365258191,
+      "min": 0.6902930402930403,
+      "max": 0.7371794871794872
+    },
+    "auc_pr": {
+      "mean": 0.2729331316077428,
+      "std": 0.0295776184398548,
+      "min": 0.237306195756735,
+      "max": 0.30514339203552215
+    },
+    "accuracy": {
+      "mean": 0.8547169811320755,
+      "std": 0.008437992367923733,
+      "min": 0.839622641509434,
+      "max": 0.8584905660377359
+    },
+    "balanced_accuracy": {
+      "mean": 0.5172893772893772,
+      "std": 0.015828245304974536,
+      "min": 0.5,
+      "max": 0.5307692307692308
+    },
+    "f1_score": {
+      "mean": 0.07705882352941176,
+      "std": 0.0715739992611997,
+      "min": 0.0,
+      "max": 0.15
+    },
+    "sensitivity": {
+      "mean": 0.04666666666666667,
+      "std": 0.044721359549995794,
+      "min": 0.0,
+      "max": 0.1
+    },
+    "specificity": {
+      "mean": 0.987912087912088,
+      "std": 0.015733869300303675,
+      "min": 0.9615384615384616,
+      "max": 1.0
+    },
+    "mcc": {
+      "mean": 0.0772873428083937,
+      "std": 0.07255506762420859,
+      "min": 0.0,
+      "max": 0.14263154912324713
+    }
+  },
+  "best_fold": {
+    "fold": 5.0,
+    "best_epoch": 2.0,
+    "accuracy": 0.839622641509434,
+    "balanced_accuracy": 0.5307692307692308,
+    "precision": 0.3,
+    "recall": 0.1,
+    "sensitivity": 0.1,
+    "f1_score": 0.15,
+    "cohen_kappa": 0.08527918781725896,
+    "specificity": 0.9615384615384616,
+    "npv": 0.8663366336633663,
+    "ppv": 0.3,
+    "mcc": 0.10117361579547425,
+    "auroc": 0.7371794871794872,
+    "auc_pr": 0.30514339203552215,
+    "n_samples": 212.0,
+    "n_positive": 30.0,
+    "n_negative": 182.0,
+    "class_ratio": 0.14150943396226415
+  },
+  "worst_fold": {
+    "fold": 4.0,
+    "best_epoch": 2.0,
+    "accuracy": 0.8584905660377359,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "sensitivity": 0.0,
+    "f1_score": 0.0,
+    "cohen_kappa": 0.0,
+    "specificity": 1.0,
+    "npv": 0.8584905660377359,
+    "ppv": 0.0,
+    "mcc": 0.0,
+    "auroc": 0.6902930402930403,
+    "auc_pr": 0.27927311123522597,
+    "n_samples": 212.0,
+    "n_positive": 30.0,
+    "n_negative": 182.0,
+    "class_ratio": 0.14150943396226415
+  },
+  "config": {
+    "model_name": "virchow2",
+    "mil_architecture": "mean",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null
+    }
+  },
+  "interpretability_run": false
+}

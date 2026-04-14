@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+conch_clam,conch,clam,0.5650898423175652,0.04213394214297844,0.528157813671202,0.6020218709639285,0.2222222222222222,0.12871287128712872,5

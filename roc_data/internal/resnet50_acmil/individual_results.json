@@ -1,0 +1,277 @@
+{
+  "model_folder": "results_classification_cv_updated/resnet50_acmil_20250915_000619",
+  "test_csv": "data/manifests/test_features_resnet50.csv",
+  "n_test_samples": 128,
+  "n_folds": 5,
+  "data_format_distribution": {
+    "h5_bcr_net": 22,
+    "tfrecord_ucmc": 95
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.6761363636363636,
+      "best_epoch": 1,
+      "accuracy": 0.7578125,
+      "balanced_accuracy": 0.6294462779611294,
+      "precision": 0.4230769230769231,
+      "recall": 0.4074074074074074,
+      "sensitivity": 0.4074074074074074,
+      "f1_score": 0.41509433962264153,
+      "cohen_kappa": 0.26245353159851303,
+      "specificity": 0.8514851485148515,
+      "npv": 0.8431372549019608,
+      "ppv": 0.4230769230769231,
+      "mcc": 0.26252784416076014,
+      "auroc": 0.6347634763476347,
+      "auc_pr": 0.42091683150704107,
+      "n_samples": 128,
+      "n_positive": 27,
+      "n_negative": 101,
+      "class_ratio": 0.2109375
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.7659090909090909,
+      "best_epoch": 4,
+      "accuracy": 0.65625,
+      "balanced_accuracy": 0.632929959662633,
+      "precision": 0.32653061224489793,
+      "recall": 0.5925925925925926,
+      "sensitivity": 0.5925925925925926,
+      "f1_score": 0.42105263157894735,
+      "cohen_kappa": 0.2047444224795255,
+      "specificity": 0.6732673267326733,
+      "npv": 0.8607594936708861,
+      "ppv": 0.32653061224489793,
+      "mcc": 0.22314330025611534,
+      "auroc": 0.7143381004767143,
+      "auc_pr": 0.48760705141359817,
+      "n_samples": 128,
+      "n_positive": 27,
+      "n_negative": 101,
+      "class_ratio": 0.2109375
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.6238095238095238,
+      "best_epoch": 1,
+      "accuracy": 0.6171875,
+      "balanced_accuracy": 0.5946094609460946,
+      "precision": 0.28846153846153844,
+      "recall": 0.5555555555555556,
+      "sensitivity": 0.5555555555555556,
+      "f1_score": 0.379746835443038,
+      "cohen_kappa": 0.1412924424972618,
+      "specificity": 0.6336633663366337,
+      "npv": 0.8421052631578947,
+      "ppv": 0.28846153846153844,
+      "mcc": 0.15718049954539684,
+      "auroc": 0.6296296296296298,
+      "auc_pr": 0.3894960540597471,
+      "n_samples": 128,
+      "n_positive": 27,
+      "n_negative": 101,
+      "class_ratio": 0.2109375
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.7607142857142858,
+      "best_epoch": 1,
+      "accuracy": 0.734375,
+      "balanced_accuracy": 0.6552988632196552,
+      "precision": 0.4,
+      "recall": 0.5185185185185185,
+      "sensitivity": 0.5185185185185185,
+      "f1_score": 0.45161290322580644,
+      "cohen_kappa": 0.28018524644392984,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8602150537634409,
+      "ppv": 0.4,
+      "mcc": 0.2842924622360004,
+      "auroc": 0.6578657865786578,
+      "auc_pr": 0.43656336754947933,
+      "n_samples": 128,
+      "n_positive": 27,
+      "n_negative": 101,
+      "class_ratio": 0.2109375
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.7119047619047618,
+      "best_epoch": 5,
+      "accuracy": 0.7265625,
+      "balanced_accuracy": 0.6232123212321232,
+      "precision": 0.375,
+      "recall": 0.4444444444444444,
+      "sensitivity": 0.4444444444444444,
+      "f1_score": 0.4067796610169492,
+      "cohen_kappa": 0.23076923076923073,
+      "specificity": 0.801980198019802,
+      "npv": 0.84375,
+      "ppv": 0.375,
+      "mcc": 0.2321753443823308,
+      "auroc": 0.6721672167216722,
+      "auc_pr": 0.4621608551047825,
+      "n_samples": 128,
+      "n_positive": 27,
+      "n_negative": 101,
+      "class_ratio": 0.2109375
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6617528419508617,
+      "std": 0.03409217080600701,
+      "min": 0.6296296296296298,
+      "max": 0.7143381004767143
+    },
+    "auc_pr": {
+      "mean": 0.4393488319269296,
+      "std": 0.0376896572743831,
+      "min": 0.3894960540597471,
+      "max": 0.48760705141359817
+    },
+    "accuracy": {
+      "mean": 0.6984375,
+      "std": 0.05913809646179863,
+      "min": 0.6171875,
+      "max": 0.7578125
+    },
+    "balanced_accuracy": {
+      "mean": 0.627099376604327,
+      "std": 0.021825549873325516,
+      "min": 0.5946094609460946,
+      "max": 0.6552988632196552
+    },
+    "f1_score": {
+      "mean": 0.4148572741774766,
+      "std": 0.025920096752286487,
+      "min": 0.379746835443038,
+      "max": 0.45161290322580644
+    },
+    "sensitivity": {
+      "mean": 0.5037037037037037,
+      "std": 0.07680163464195452,
+      "min": 0.4074074074074074,
+      "max": 0.5925925925925926
+    },
+    "specificity": {
+      "mean": 0.7504950495049505,
+      "std": 0.09245637647468316,
+      "min": 0.6336633663366337,
+      "max": 0.8514851485148515
+    },
+    "mcc": {
+      "mean": 0.23186389011612074,
+      "std": 0.048329048642061126,
+      "min": 0.15718049954539684,
+      "max": 0.2842924622360004
+    }
+  },
+  "best_fold": {
+    "fold": 2.0,
+    "val_auroc": 0.7659090909090909,
+    "best_epoch": 4.0,
+    "accuracy": 0.65625,
+    "balanced_accuracy": 0.632929959662633,
+    "precision": 0.32653061224489793,
+    "recall": 0.5925925925925926,
+    "sensitivity": 0.5925925925925926,
+    "f1_score": 0.42105263157894735,
+    "cohen_kappa": 0.2047444224795255,
+    "specificity": 0.6732673267326733,
+    "npv": 0.8607594936708861,
+    "ppv": 0.32653061224489793,
+    "mcc": 0.22314330025611534,
+    "auroc": 0.7143381004767143,
+    "auc_pr": 0.48760705141359817,
+    "n_samples": 128.0,
+    "n_positive": 27.0,
+    "n_negative": 101.0,
+    "class_ratio": 0.2109375
+  },
+  "worst_fold": {
+    "fold": 3.0,
+    "val_auroc": 0.6238095238095238,
+    "best_epoch": 1.0,
+    "accuracy": 0.6171875,
+    "balanced_accuracy": 0.5946094609460946,
+    "precision": 0.28846153846153844,
+    "recall": 0.5555555555555556,
+    "sensitivity": 0.5555555555555556,
+    "f1_score": 0.379746835443038,
+    "cohen_kappa": 0.1412924424972618,
+    "specificity": 0.6336633663366337,
+    "npv": 0.8421052631578947,
+    "ppv": 0.28846153846153844,
+    "mcc": 0.15718049954539684,
+    "auroc": 0.6296296296296298,
+    "auc_pr": 0.3894960540597471,
+    "n_samples": 128.0,
+    "n_positive": 27.0,
+    "n_negative": 101.0,
+    "class_ratio": 0.2109375
+  },
+  "config": {
+    "model_name": "resnet50",
+    "mil_architecture": "acmil",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "use_scheduler": true,
+      "scheduler_type": "cosine",
+      "n_branches": 5,
+      "top_k": 10,
+      "mask_ratio": 0.6,
+      "lambda_p": 1.0,
+      "lambda_d": 1.0,
+      "gate": true
+    }
+  },
+  "predictions_saved": true,
+  "mean_roc_performance": {
+    "model_identifier": "resnet50_acmil",
+    "mean_auc": 0.6615328199486615,
+    "auc_std": 0.03049296456910619,
+    "data_files": {
+      "json": "resnet50_acmil_mean_roc_data.json",
+      "numpy": "resnet50_acmil_mean_roc_arrays.npz",
+      "csv": "resnet50_acmil_mean_performance.csv"
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 128,
+    "ensemble_accuracy": 0.7109375,
+    "majority_vote_accuracy": 0.7265625,
+    "samples_with_fold_agreement": 89,
+    "agreement_rate": 0.6953125,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7821782178217822,
+    "class_0_agreement_rate": 0.6831683168316832,
+    "class_1_samples": 27,
+    "class_1_ensemble_accuracy": 0.4444444444444444,
+    "class_1_agreement_rate": 0.7407407407407407
+  }
+}

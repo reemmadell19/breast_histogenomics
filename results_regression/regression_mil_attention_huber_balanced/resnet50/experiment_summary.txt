@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-27 22:07:51
+Results Directory: results_regression/regression_mil_attention_huber_balanced/resnet50
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: resnet50
+MIL Architecture: Attention MIL
+Input Dimension: 2048
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: huber
+Huber Delta: 5.0
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: resnet50
+MIL Architecture: Attention MIL
+Input Dimension: 2048
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.5691
+  RMSE: 12.2928
+  MAE: 9.2957
+  R²: -0.1100
+  Spearman ρ: 0.0246
+  Binary Accuracy: 0.6893
+  F1-Score: 0.2727
+  Boundary MAE: 4.9055
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.4974
+  RMSE: 13.2374
+  MAE: 9.7765
+  R²: -0.2872
+  Spearman ρ: -0.0392
+  Binary Accuracy: 0.5922
+  F1-Score: 0.1600
+  Boundary MAE: 5.8263
+
+All results saved to: results_regression/regression_mil_attention_huber_balanced/resnet50
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

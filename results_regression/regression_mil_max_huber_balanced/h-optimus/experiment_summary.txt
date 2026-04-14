@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-27 21:08:46
+Results Directory: results_regression/regression_mil_max_huber_balanced/h-optimus
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: h-optimus
+MIL Architecture: Max Pooling
+Input Dimension: 1536
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: huber
+Huber Delta: 5.0
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: h-optimus
+MIL Architecture: Max Pooling
+Input Dimension: 1536
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.6577
+  RMSE: 12.1388
+  MAE: 9.4591
+  R²: -0.0824
+  Spearman ρ: 0.1885
+  Binary Accuracy: 0.6505
+  F1-Score: 0.3333
+  Boundary MAE: 4.5266
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.6577
+  RMSE: 12.1388
+  MAE: 9.4591
+  R²: -0.0824
+  Spearman ρ: 0.1885
+  Binary Accuracy: 0.6505
+  F1-Score: 0.3333
+  Boundary MAE: 4.5266
+
+All results saved to: results_regression/regression_mil_max_huber_balanced/h-optimus
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

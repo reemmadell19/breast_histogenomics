@@ -1,0 +1,13 @@
+{
+  "dataset": "fold_3",
+  "model_architecture": "attention",
+  "n_visualized": 10,
+  "patches_per_category": 5,
+  "total_patches_shown": 150,
+  "categories_visualized": {
+    "correct_high_risk": 4,
+    "misclassified": 3,
+    "correct_low_risk": 3
+  },
+  "patch_formats": "TFRecord and H5"
+}

@@ -1,0 +1,2 @@
+Model,Dataset,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+resnet18_clam,ECU,resnet18,clam,0.6274725274725275,0.019380578184658097,0.6104847016889826,0.6444603532560723,0.1,0.36813186813186816,5

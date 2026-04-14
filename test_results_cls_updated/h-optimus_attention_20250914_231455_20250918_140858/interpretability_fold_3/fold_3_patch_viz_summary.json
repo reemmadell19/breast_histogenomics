@@ -1,0 +1,21 @@
+{
+  "dataset": "fold_3",
+  "model_architecture": "attention",
+  "n_visualized": 20,
+  "n_h5_visualized": 10,
+  "n_tfrecord_visualized": 10,
+  "patches_per_category": 5,
+  "total_patches_shown": 300,
+  "format_distribution": {
+    "BCR_NET (H5)": 10,
+    "UCMC (TFRecord)": 10
+  },
+  "categories_visualized": {
+    "total": 20,
+    "by_format": {
+      "h5": 10,
+      "tfrecord": 10
+    }
+  },
+  "patch_formats": "TFRecord and H5"
+}

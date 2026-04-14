@@ -1,0 +1,1 @@
+resnet18+mean: AUROC=0.6334, RMSE=11.9199, MAE=9.0757, R²=-0.0437, BinAcc=0.7670, F1=0.3333

@@ -1,0 +1,1 @@
+conch+mean: AUROC=0.5949, RMSE=12.1188, MAE=9.4649, R²=-0.0788, BinAcc=0.8058, F1=0.3750

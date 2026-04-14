@@ -1,0 +1,1 @@
+conch+clam: AUROC=0.5902, RMSE=11.8841, MAE=8.8957, R²=-0.0374, BinAcc=0.7573, F1=0.1379

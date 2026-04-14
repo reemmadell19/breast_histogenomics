@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+virchow2_mean,virchow2,mean,0.7642097543087641,0.01392198286263827,0.7520065982842852,0.7764129103332431,0.5185185185185185,0.37623762376237624,5

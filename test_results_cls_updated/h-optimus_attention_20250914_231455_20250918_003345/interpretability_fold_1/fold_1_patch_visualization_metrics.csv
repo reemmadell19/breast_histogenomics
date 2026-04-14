@@ -1,0 +1,11 @@
+slide_id,error,RS_score,RS_category,visualization_category
+UCH_BRCA_RS_493 (2),No patches found,18.0,L,misclassified
+UCH_BRCA_RS_210,No patches found,8.0,L,correct_low_risk
+UCH_BRCA_RS_91,No patches found,9.0,L,correct_low_risk
+63,No patches found,42.0,H,correct_high_risk
+12,No patches found,26.0,H,misclassified
+42,No patches found,6.0,L,misclassified
+UCH_BRCA_RS_262,No patches found,11.0,L,correct_low_risk
+UCH_BRCA_RS_521,No patches found,44.0,H,correct_high_risk
+UCH_BRCA_RS_504,No patches found,29.0,H,correct_high_risk
+UCH_BRCA_RS_156,No patches found,29.0,H,correct_high_risk

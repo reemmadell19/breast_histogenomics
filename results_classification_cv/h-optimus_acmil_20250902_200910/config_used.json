@@ -1,0 +1,23 @@
+{
+  "model_name": "h-optimus",
+  "mil_architecture": "acmil",
+  "optimizer_type": "adamw",
+  "learning_rate": 5e-05,
+  "weight_decay": 0.001,
+  "num_epochs": 50,
+  "batch_size": 1,
+  "hidden_dim": 128,
+  "attention_hidden_dim": 256,
+  "n_branches": 5,
+  "n_masked_patch": 10,
+  "mask_ratio": 0.6,
+  "dropout": 0.25,
+  "use_class_balancing": true,
+  "use_class_weights": false,
+  "use_gradient_clip": true,
+  "gradient_clip_val": 1.0,
+  "use_scheduler": false,
+  "scheduler_type": "cosine",
+  "n_folds": 5,
+  "random_seed": 42
+}

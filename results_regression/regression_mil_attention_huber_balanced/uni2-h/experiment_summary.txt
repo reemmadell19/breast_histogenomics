@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-27 22:45:08
+Results Directory: results_regression/regression_mil_attention_huber_balanced/uni2-h
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: uni2-h
+MIL Architecture: Attention MIL
+Input Dimension: 1536
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: huber
+Huber Delta: 5.0
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: uni2-h
+MIL Architecture: Attention MIL
+Input Dimension: 1536
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.7152
+  RMSE: 12.0399
+  MAE: 9.1838
+  R²: -0.0648
+  Spearman ρ: 0.2327
+  Binary Accuracy: 0.7670
+  F1-Score: 0.3684
+  Boundary MAE: 4.1664
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.6719
+  RMSE: 11.7858
+  MAE: 8.7308
+  R²: -0.0203
+  Spearman ρ: 0.2778
+  Binary Accuracy: 0.6893
+  F1-Score: 0.4286
+  Boundary MAE: 5.3408
+
+All results saved to: results_regression/regression_mil_attention_huber_balanced/uni2-h
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

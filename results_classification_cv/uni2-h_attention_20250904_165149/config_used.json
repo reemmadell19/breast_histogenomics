@@ -1,0 +1,29 @@
+{
+  "model_name": "uni2-h",
+  "mil_architecture": "attention",
+  "optimizer_type": "adamw",
+  "learning_rate": 3e-05,
+  "weight_decay": 0.005,
+  "num_epochs": 50,
+  "batch_size": 4,
+  "hidden_dim": 48,
+  "attention_hidden_dim": 128,
+  "n_branches": 5,
+  "n_masked_patch": 5,
+  "mask_ratio": 0.2,
+  "dropout": 0.35,
+  "use_class_balancing": true,
+  "use_class_weights": false,
+  "use_gradient_clip": true,
+  "gradient_clip_val": 1.0,
+  "label_smoothing": 0.2,
+  "use_scheduler": true,
+  "scheduler_type": "cosine",
+  "n_folds": 5,
+  "random_seed": 42,
+  "loss_function": "focal_loss",
+  "alpha": [
+    0.25,
+    0.75
+  ]
+}

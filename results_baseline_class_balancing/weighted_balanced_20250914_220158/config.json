@@ -1,0 +1,21 @@
+{
+  "strategy": "weighted_balanced",
+  "strategy_name": "Weighted CE + Balanced Sampling",
+  "strategy_config": {
+    "name": "Weighted CE + Balanced Sampling",
+    "use_class_weights": true,
+    "use_focal_loss": false,
+    "use_balanced_sampling": true,
+    "description": "Combination of weighted CE and balanced sampling"
+  },
+  "model": "resnet18",
+  "mil_architecture": "mean",
+  "learning_rate": 0.0001,
+  "weight_decay": 1e-05,
+  "num_epochs": 30,
+  "batch_size": 4,
+  "hidden_dim": 256,
+  "dropout": 0.25,
+  "n_folds": 5,
+  "random_seed": 42
+}

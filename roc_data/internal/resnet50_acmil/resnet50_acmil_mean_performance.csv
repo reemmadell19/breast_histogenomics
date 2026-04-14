@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+resnet50_acmil,resnet50,acmil,0.6615328199486615,0.03049296456910619,0.6348045580367521,0.688261081860571,0.3333333333333333,0.26732673267326734,5

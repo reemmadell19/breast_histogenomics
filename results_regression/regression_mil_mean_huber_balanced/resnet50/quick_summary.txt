@@ -1,0 +1,1 @@
+resnet50+mean: AUROC=0.6371, RMSE=12.1749, MAE=9.1808, R²=-0.0888, BinAcc=0.7767, F1=0.4651

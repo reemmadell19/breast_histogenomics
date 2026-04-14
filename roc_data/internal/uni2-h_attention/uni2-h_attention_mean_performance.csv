@@ -1,0 +1,2 @@
+Model,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+uni2-h_attention,uni2-h,attention,0.8151815181518152,0.042936936545245004,0.7775456338783961,0.8528174024252342,0.4444444444444444,0.49504950495049505,5

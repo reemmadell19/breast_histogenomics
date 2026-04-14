@@ -1,0 +1,13 @@
+torch
+torchvision
+pandas
+numpy
+tensorflow
+h5py
+scikit-learn
+matplotlib
+tqdm
+seaborn
+scipy
+pillow
+requests

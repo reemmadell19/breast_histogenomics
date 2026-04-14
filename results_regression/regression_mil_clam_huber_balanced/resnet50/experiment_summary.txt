@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-27 23:25:23
+Results Directory: results_regression/regression_mil_clam_huber_balanced/resnet50
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: resnet50
+MIL Architecture: CLAM
+Input Dimension: 2048
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: huber
+Huber Delta: 5.0
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: resnet50
+MIL Architecture: CLAM
+Input Dimension: 2048
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.7194
+  RMSE: 13.4587
+  MAE: 10.1643
+  R²: -0.3306
+  Spearman ρ: 0.1718
+  Binary Accuracy: 0.6602
+  F1-Score: 0.4776
+  Boundary MAE: 5.9995
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.6888
+  RMSE: 13.8453
+  MAE: 10.9110
+  R²: -0.4081
+  Spearman ρ: 0.1665
+  Binary Accuracy: 0.6019
+  F1-Score: 0.4675
+  Boundary MAE: 6.6873
+
+All results saved to: results_regression/regression_mil_clam_huber_balanced/resnet50
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

@@ -1,0 +1,1 @@
+virchow2+max: AUROC=0.7384, RMSE=11.0968, MAE=7.8259, R²=0.0955, BinAcc=0.7864, F1=0.2667

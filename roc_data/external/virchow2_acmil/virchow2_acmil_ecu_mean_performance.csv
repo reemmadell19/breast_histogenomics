@@ -1,0 +1,2 @@
+Model,Dataset,Feature_Extractor,MIL_Architecture,Mean_AUC,Std_AUC,CI_Lower,CI_Upper,Sensitivity_at_90_Spec,Specificity_at_90_Sens,N_Folds
+virchow2_acmil,ECU,virchow2,acmil,0.7355311355311356,0.015384877025509364,0.7220456962361662,0.749016574826105,0.23333333333333334,0.510989010989011,5

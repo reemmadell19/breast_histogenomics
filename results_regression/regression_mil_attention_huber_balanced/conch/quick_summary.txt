@@ -1,0 +1,1 @@
+conch+attention: AUROC=0.5301, RMSE=13.0026, MAE=10.5458, R²=-0.2419, BinAcc=0.6602, F1=0.2222

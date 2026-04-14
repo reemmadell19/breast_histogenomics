@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+Generated on: 2025-08-28 12:16:05
+Results Directory: results_regression/regression_mil_attention_huber_balanced/conch
+================================================================================
+
+EXPERIMENT CONFIGURATION:
+----------------------------------------
+Feature Extractor: conch
+MIL Architecture: Attention MIL
+Input Dimension: 512
+Hidden Dimension: 128
+Learning Rate: 0.0001
+Number of Epochs: 15
+Loss Type: huber
+Huber Delta: 5.0
+Class Balancing: True
+Boundary Weighting: False
+Random Seed: 42
+
+================================================================================
+TRAINING COMPLETED - PERFORMANCE SUMMARY
+================================================================================
+Feature Extractor: conch
+MIL Architecture: Attention MIL
+Input Dimension: 512
+
+BEST MODEL PERFORMANCE (saved model):
+  AUROC: 0.5301
+  RMSE: 13.0026
+  MAE: 10.5458
+  R²: -0.2419
+  Spearman ρ: -0.0534
+  Binary Accuracy: 0.6602
+  F1-Score: 0.2222
+  Boundary MAE: 5.1021
+
+FINAL MODEL PERFORMANCE (last epoch):
+  AUROC: 0.5301
+  RMSE: 13.0026
+  MAE: 10.5458
+  R²: -0.2419
+  Spearman ρ: -0.0534
+  Binary Accuracy: 0.6602
+  F1-Score: 0.2222
+  Boundary MAE: 5.1021
+
+All results saved to: results_regression/regression_mil_attention_huber_balanced/conch
+
+================================================================================
+EXPERIMENT SUMMARY COMPLETED
+================================================================================

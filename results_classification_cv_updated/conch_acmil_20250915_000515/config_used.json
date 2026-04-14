@@ -1,0 +1,37 @@
+{
+  "model_name": "conch",
+  "mil_architecture": "acmil",
+  "global_config": {
+    "num_epochs": 100,
+    "batch_size": 1,
+    "optimizer_type": "adam",
+    "use_class_balancing": true,
+    "use_gradient_clip": true,
+    "gradient_clip_val": 1.0,
+    "focal_loss": {
+      "gamma": 2.0,
+      "alpha": [
+        0.25,
+        0.75
+      ]
+    },
+    "n_folds": 5,
+    "random_seed": 42,
+    "use_early_stopping": true,
+    "patience": 15
+  },
+  "architecture_specific_params": {
+    "hidden_dim": 256,
+    "dropout": 0.25,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "use_scheduler": true,
+    "scheduler_type": "cosine",
+    "n_branches": 5,
+    "top_k": 10,
+    "mask_ratio": 0.6,
+    "lambda_p": 1.0,
+    "lambda_d": 1.0,
+    "gate": true
+  }
+}

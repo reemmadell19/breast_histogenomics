@@ -1,0 +1,29 @@
+cat > .gitignore << 'EOF'
+# Large data files
+*.tfrecord
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+EOF
+
+
+# Caches
+.cache/
+hf_cache/
+
+
+# Data
+data/
+
+# External tools (cloned repos)
+external_tools/
