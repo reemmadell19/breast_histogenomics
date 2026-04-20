@@ -1,0 +1,15 @@
+{
+  "total_samples": 128,
+  "ensemble_accuracy": 0.796875,
+  "majority_vote_accuracy": 0.7890625,
+  "samples_with_fold_agreement": 90,
+  "agreement_rate": 0.703125,
+  "class_0_samples": 101,
+  "class_0_ensemble_accuracy": 0.8613861386138614,
+  "class_0_agreement_rate": 0.693069306930693,
+  "class_1_samples": 27,
+  "class_1_ensemble_accuracy": 0.5555555555555556,
+  "class_1_agreement_rate": 0.7407407407407407,
+  "high_uncertainty_cases": 10,
+  "fold_disagreement_cases": 38
+}

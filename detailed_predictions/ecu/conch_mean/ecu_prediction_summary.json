@@ -1,0 +1,22 @@
+{
+  "dataset": "ECU",
+  "total_samples": 212,
+  "ensemble_accuracy": 0.8584905660377359,
+  "majority_vote_accuracy": 0.8584905660377359,
+  "samples_with_fold_agreement": 210,
+  "agreement_rate": 0.9905660377358491,
+  "class_0_samples": 182,
+  "low_risk_samples": 182,
+  "class_0_ensemble_accuracy": 1.0,
+  "low_risk_ensemble_accuracy": 1.0,
+  "class_0_agreement_rate": 0.989010989010989,
+  "low_risk_agreement_rate": 0.989010989010989,
+  "class_1_samples": 30,
+  "high_risk_samples": 30,
+  "class_1_ensemble_accuracy": 0.0,
+  "high_risk_ensemble_accuracy": 0.0,
+  "class_1_agreement_rate": 1.0,
+  "high_risk_agreement_rate": 1.0,
+  "high_uncertainty_cases": 10,
+  "fold_disagreement_cases": 2
+}
