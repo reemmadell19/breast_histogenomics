@@ -1173,4 +1173,4 @@ if __name__ == "__main__":
 
 # python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_clam_20250915_002540 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_clam  --save-predictions
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_mean_20250915_004647 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_mean  --save-predictions
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_mean_20250915_004647 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_mean  --save-predictions
