@@ -1167,7 +1167,7 @@ if __name__ == "__main__":
 
 # python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_mean_20250915_004639 --test-csv data/manifests/test_features_resnet50.csv --output-dir detailed_predictions/internal/resnet50_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_acmil  --save-predictionsc
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_acmil  --save-predictions
 
 # python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_attention_20250915_003630 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_attention  --save-predictions
 
