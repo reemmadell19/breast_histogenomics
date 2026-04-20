@@ -1127,50 +1127,50 @@ if __name__ == "__main__":
 
 ### new
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/h-optimus_acmil_20250914_204945 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_acmil_20250914_204945 --test-csv data/manifests/test_features_h-optimus.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/h-optimus_attention_20250914_231455 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_attention_20250914_231455 --test-csv data/manifests/test_features_h-optimus.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/h-optimus_clam_20250914_231419 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_clam_20250914_231419 --test-csv data/manifests/test_features_h-optimus.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/h-optimus_mean_20250914_231513 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_mean_20250914_231513 --test-csv data/manifests/test_features_h-optimus.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/virchow2_acmil_20250915_000404 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_acmil_20250915_000404 --test-csv data/manifests/test_features_virchow2.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/virchow2_attention_20250915_003518 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_attention_20250915_003518 --test-csv data/manifests/test_features_virchow2.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/virchow2_clam_20250915_002422 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_clam_20250915_002422 --test-csv data/manifests/test_features_virchow2.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/virchow2_mean_20250915_004613 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_mean_20250915_004613 --test-csv data/manifests/test_features_virchow2.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/uni2-h_acmil_20250915_000434 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_acmil_20250915_000434 --test-csv data/manifests/test_features_uni2-h.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/uni2-h_attention_20250915_003535 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_attention_20250915_003535 --test-csv data/manifests/test_features_uni2-h.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/uni2-h_clam_20250915_002443 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_clam_20250915_002443 --test-csv data/manifests/test_features_uni2-h.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/uni2-h_mean_20250915_004627 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_mean_20250915_004627 --test-csv data/manifests/test_features_uni2-h.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/conch_acmil_20250915_000515 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_acmil_20250915_000515 --test-csv data/manifests/test_features_conch.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/conch_attention_20250915_005221 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_attention_20250915_005221 --test-csv data/manifests/test_features_conch.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/conch_clam_20250915_004600 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_clam_20250915_004600 --test-csv data/manifests/test_features_conch.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/conch_mean_20250915_005832 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_mean_20250915_005832 --test-csv data/manifests/test_features_conch.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet50_acmil_20250915_000619 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_acmil_20250915_000619 --test-csv data/manifests/test_features_resnet50.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet50_attention_20250915_003616 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_attention_20250915_003616 --test-csv data/manifests/test_features_resnet50.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet50_clam_20250915_002521 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_clam_20250915_002521 --test-csv data/manifests/test_features_resnet50.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet50_mean_20250915_004639 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_mean_20250915_004639 --test-csv data/manifests/test_features_resnet50.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_attention_20250915_003630 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_attention_20250915_003630 --test-csv data/manifests/test_features_resnet18.csv 
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_clam_20250915_002540 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_clam_20250915_002540 --test-csv data/manifests/test_features_resnet18.csv 
 
 # python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_mean_20250915_004647 --test-csv data/manifests/test_features_resnet18.csv 
