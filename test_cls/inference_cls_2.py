@@ -1127,50 +1127,50 @@ if __name__ == "__main__":
 
 ### new
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_acmil_20250914_204945 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_acmil_20250914_204945 --test-csv data/manifests/test_features_h-optimus.csv --output-dir detailed_predictions/internal/h-optimus_acmil  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_attention_20250914_231455 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_attention_20250914_231455 --test-csv data/manifests/test_features_h-optimus.csv --output-dir detailed_predictions/internal/h-optimus_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_clam_20250914_231419 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_clam_20250914_231419 --test-csv data/manifests/test_features_h-optimus.csv --output-dir detailed_predictions/internal/h-optimus_clam  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_mean_20250914_231513 --test-csv data/manifests/test_features_h-optimus.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/h-optimus_mean_20250914_231513 --test-csv data/manifests/test_features_h-optimus.csv --output-dir detailed_predictions/internal/h-optimus_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_acmil_20250915_000404 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_acmil_20250915_000404 --test-csv data/manifests/test_features_virchow2.csv --output-dir detailed_predictions/internal/virchow2_acmil  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_attention_20250915_003518 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_attention_20250915_003518 --test-csv data/manifests/test_features_virchow2.csv --output-dir detailed_predictions/internal/virchow2_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_clam_20250915_002422 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_clam_20250915_002422 --test-csv data/manifests/test_features_virchow2.csv --output-dir detailed_predictions/internal/virchow2_clam  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_mean_20250915_004613 --test-csv data/manifests/test_features_virchow2.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/virchow2_mean_20250915_004613 --test-csv data/manifests/test_features_virchow2.csv --output-dir detailed_predictions/internal/virchow2_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_acmil_20250915_000434 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_acmil_20250915_000434 --test-csv data/manifests/test_features_uni2-h.csv --output-dir detailed_predictions/internal/uni2h_acmil  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_attention_20250915_003535 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_attention_20250915_003535 --test-csv data/manifests/test_features_uni2-h.csv --output-dir detailed_predictions/internal/uni2h_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_clam_20250915_002443 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_clam_20250915_002443 --test-csv data/manifests/test_features_uni2-h.csv --output-dir detailed_predictions/internal/uni2h_clam  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_mean_20250915_004627 --test-csv data/manifests/test_features_uni2-h.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/uni2-h_mean_20250915_004627 --test-csv data/manifests/test_features_uni2-h.csv --output-dir detailed_predictions/internal/uni2h_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_acmil_20250915_000515 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_acmil_20250915_000515 --test-csv data/manifests/test_features_conch.csv --output-dir detailed_predictions/internal/conch_acmil  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_attention_20250915_005221 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_attention_20250915_005221 --test-csv data/manifests/test_features_conch.csv --output-dir detailed_predictions/internal/conch_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_clam_20250915_004600 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_clam_20250915_004600 --test-csv data/manifests/test_features_conch.csv --output-dir detailed_predictions/internal/conch_clam  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_mean_20250915_005832 --test-csv data/manifests/test_features_conch.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/conch_mean_20250915_005832 --test-csv data/manifests/test_features_conch.csv --output-dir detailed_predictions/internal/conch_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_acmil_20250915_000619 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_acmil_20250915_000619 --test-csv data/manifests/test_features_resnet50.csv --output-dir detailed_predictions/internal/resnet50_acmil  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_attention_20250915_003616 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_attention_20250915_003616 --test-csv data/manifests/test_features_resnet50.csv --output-dir detailed_predictions/internal/resnet50_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_clam_20250915_002521 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_clam_20250915_002521 --test-csv data/manifests/test_features_resnet50.csv --output-dir detailed_predictions/internal/resnet50_clam  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_mean_20250915_004639 --test-csv data/manifests/test_features_resnet50.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet50_mean_20250915_004639 --test-csv data/manifests/test_features_resnet50.csv --output-dir detailed_predictions/internal/resnet50_mean  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_acmil_20250915_000643 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_acmil  --save-predictionsc
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_attention_20250915_003630 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_attention_20250915_003630 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_attention  --save-predictions
 
-# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_clam_20250915_002540 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_2.py --model-folder results_classification_cv_updated/resnet18_clam_20250915_002540 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_clam  --save-predictions
 
-# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_mean_20250915_004647 --test-csv data/manifests/test_features_resnet18.csv 
+# python -B test_cls/inference_cls_updated.py --model-folder results_classification_cv_updated/resnet18_mean_20250915_004647 --test-csv data/manifests/test_features_resnet18.csv --output-dir detailed_predictions/internal/resnet18_mean  --save-predictions
