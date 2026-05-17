@@ -1,1 +1,0 @@
-virchow2+mean: AUROC=0.8307, RMSE=9.6067, MAE=6.8316, R²=0.3221, BinAcc=0.7864, F1=0.5000

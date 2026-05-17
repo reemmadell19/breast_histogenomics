@@ -1,6 +1,3 @@
-# File: utils/training_helpers.py
-# Helper functions to reduce code repetition across training scripts
-
 import os
 import random
 import numpy as np
@@ -28,7 +25,7 @@ def setup_directories(model_name: str, experiment_type: str = "") -> str:
     suffix = f"_{experiment_type}" if experiment_type else ""
     results_dir = f"results/{model_name}{suffix}"
     os.makedirs(results_dir, exist_ok=True)
-    print(f"📁 Results will be saved to: {results_dir}")
+    print(f" Results will be saved to: {results_dir}")
     return results_dir
 
 def initialize_wandb(project_name: str, run_name: str, config: Dict[str, Any]):
@@ -174,9 +171,9 @@ def print_epoch_metrics(epoch: int, num_epochs: int, train_loss: float, val_loss
                        train_metrics: Dict, val_metrics: Dict, model_name: str):
     """Print formatted epoch metrics."""
     print(f"\nEpoch {epoch}/{num_epochs}")
-    print(f"📊 TRAIN - Loss: {train_loss:.4f} | Acc: {train_metrics['accuracy']:.4f} | "
+    print(f" TRAIN - Loss: {train_loss:.4f} | Acc: {train_metrics['accuracy']:.4f} | "
           f"AUC: {train_metrics['auc_roc']:.4f} | F1: {train_metrics['f1_score']:.4f}")
-    print(f"📊 VAL   - Loss: {val_loss:.4f} | Acc: {val_metrics['accuracy']:.4f} | "
+    print(f" VAL   - Loss: {val_loss:.4f} | Acc: {val_metrics['accuracy']:.4f} | "
           f"AUC: {val_metrics['auc_roc']:.4f} | F1: {val_metrics['f1_score']:.4f}")
 
 def save_best_model(model, val_metrics: Dict, best_val_auc: float, results_dir: str, 
@@ -188,7 +185,7 @@ def save_best_model(model, val_metrics: Dict, best_val_auc: float, results_dir: 
         best_val_auc = current_auc
         save_path = os.path.join(results_dir, f"best_{model_name}_{experiment_type}_model.pt")
         torch.save(model.state_dict(), save_path)
-        print(f"🎯 NEW BEST MODEL! AUC: {best_val_auc:.4f} - Saved to {save_path}")
+        print(f" NEW BEST MODEL! AUC: {best_val_auc:.4f} - Saved to {save_path}")
         
         # Save best model's confusion matrix
         val_evaluator.plot_confusion_matrix(
@@ -328,10 +325,10 @@ def create_comprehensive_plots(metrics_df: pd.DataFrame, results_dir: str, model
         comprehensive_plots_path = os.path.join(results_dir, "comprehensive_training_curves.png")
         plt.savefig(comprehensive_plots_path, dpi=300, bbox_inches='tight')
         plt.close()
-        print(f"✅ Comprehensive training curves saved to: {comprehensive_plots_path}")
+        print(f" Comprehensive training curves saved to: {comprehensive_plots_path}")
         
     except Exception as e:
-        print(f"❌ Error creating comprehensive plots: {e}")
+        print(f" Error creating comprehensive plots: {e}")
         print(f"Available columns in metrics_df: {list(metrics_df.columns)}")
         
         # Create simple plots as fallback
@@ -364,10 +361,10 @@ def create_basic_plots(metrics_df: pd.DataFrame, results_dir: str, model_name: s
         fallback_plots_path = os.path.join(results_dir, "basic_training_curves.png")
         plt.savefig(fallback_plots_path, dpi=300, bbox_inches='tight')
         plt.close()
-        print(f"✅ Basic training curves saved to: {fallback_plots_path}")
+        print(f" Basic training curves saved to: {fallback_plots_path}")
         
     except Exception as e2:
-        print(f"❌ Error creating fallback plots: {e2}")
+        print(f" Error creating fallback plots: {e2}")
         print("Skipping plot generation...")
 
 def generate_final_summary(model_name: str, experiment_type: str, input_dim: int,
@@ -423,7 +420,7 @@ FILES SAVED:
 def print_final_performance(model_name: str, experiment_type: str, best_val_auc: float,
                            final_val_metrics: Dict, results_dir: str):
     """Print final performance summary."""
-    print(f"\n📋 FINAL {model_name.upper()} {experiment_type.upper()} PERFORMANCE SUMMARY:")
+    print(f"\n FINAL {model_name.upper()} {experiment_type.upper()} PERFORMANCE SUMMARY:")
     print(f"Best Validation AUC-ROC: {best_val_auc:.4f}")
     print(f"Final Validation Metrics:")
     print(f"  Accuracy: {final_val_metrics['val_accuracy']:.4f}")
@@ -432,7 +429,7 @@ def print_final_performance(model_name: str, experiment_type: str, best_val_auc:
     print(f"  Specificity: {final_val_metrics['val_specificity']:.4f}")
     print(f"  AUC-PR: {final_val_metrics['val_auc_pr']:.4f}")
     print(f"  Matthews Correlation: {final_val_metrics['val_mcc']:.4f}")
-    print(f"\n✅ All results saved to: {results_dir}/")
+    print(f"\n All results saved to: {results_dir}/")
 
 def perform_sanity_check(train_loader, model_name: str):
     """Perform sanity check on data loader."""

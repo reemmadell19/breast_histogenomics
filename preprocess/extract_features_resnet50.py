@@ -1,5 +1,3 @@
-# extract_features_resnet50_enhanced.py
-# Enhanced ResNet50 feature extraction with skip logic and error handling
 
 import os
 import torch
@@ -13,7 +11,6 @@ import numpy as np
 import gc
 import time
 
-# Silence TensorFlow logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 tf.get_logger().setLevel('ERROR')
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -21,7 +18,7 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# Image transforms (same as before)
+# Image transforms
 basic_transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
@@ -46,7 +43,7 @@ resnet = resnet.to(device)
 feature_dim = 2048
 print(f"ResNet50 feature dimension: {feature_dim}")
 
-def extract_features_in_batches(images, batch_size=12):  # Smaller batch size for ResNet50
+def extract_features_in_batches(images, batch_size=12):
     """Extract features in smaller batches to avoid memory issues with ResNet50"""
     features = []
     with torch.no_grad():
@@ -54,53 +51,52 @@ def extract_features_in_batches(images, batch_size=12):  # Smaller batch size fo
             batch = torch.stack(images[i:i + batch_size]).to(device)
             feat = resnet(batch)
             features.append(feat.cpu())
-            
-            # Clear GPU memory more frequently for ResNet50
+
             if i % (batch_size * 3) == 0:
                 torch.cuda.empty_cache()
-    
+
     return torch.cat(features)
 
 def extract_features_from_bcrnet(h5_path, out_path):
     """Extract features from BCR-NET h5 files with coordinates"""
-    print(f"  📁 Loading {os.path.basename(h5_path)}...")
-    
+    print(f"   Loading {os.path.basename(h5_path)}...")
+
     try:
         with h5py.File(h5_path, 'r') as f:
             # Check file structure first
             if 'bag' not in f:
-                print(f"  ❌ No 'bag' dataset in {h5_path}")
+                print(f"   No 'bag' dataset in {h5_path}")
                 return False
-            
+
             patches = f['bag'][:]
-            coords = f['coords'][:]  # ← ADD THIS LINE
-            print(f"  📊 Found {len(patches)} patches, shape: {patches.shape}")
-            print(f"  📊 Coordinates shape: {coords.shape}")
-            
+            coords = f['coords'][:]
+            print(f"   Found {len(patches)} patches, shape: {patches.shape}")
+            print(f"   Coordinates shape: {coords.shape}")
+
             # Check if file is too large
             if len(patches) > 50000:
-                print(f"  ⚠️  Large file with {len(patches)} patches - this may take a while")
-    
+                print(f"   Large file with {len(patches)} patches - this may take a while")
+
     except Exception as e:
-        print(f"  ❌ Error reading {h5_path}: {e}")
+        print(f"   Error reading {h5_path}: {e}")
         return False
 
     images = []
     skipped_patches = 0
-    
-    print(f"  🔄 Processing patches...")
-    
+
+    print(f"   Processing patches...")
+
     for i, patch in enumerate(tqdm(patches, desc=f"  Processing {os.path.basename(h5_path)}", leave=False)):
         try:
             if patch.shape[0] == 3:
                 patch = patch.transpose(1, 2, 0)  # convert [3, H, W] to [H, W, 3]
-            
+
             img = Image.fromarray(patch.astype('uint8'))
             tensor_img = basic_transform(img)
             images.append(tensor_img)
-            
+
             # Process in smaller chunks for ResNet50 to avoid memory buildup
-            if len(images) >= 800:  # Smaller chunks for ResNet50
+            if len(images) >= 800:
                 chunk_features = extract_features_in_batches(images, batch_size=12)
                 if 'all_features' not in locals():
                     all_features = chunk_features
@@ -108,11 +104,11 @@ def extract_features_from_bcrnet(h5_path, out_path):
                     all_features = torch.cat([all_features, chunk_features])
                 images = []  # Clear the list
                 gc.collect()  # Force garbage collection
-                
+
         except Exception as e:
             skipped_patches += 1
             if skipped_patches <= 5:  # Only print first few errors
-                print(f"    ⚠️  Skipping patch {i}: {e}")
+                print(f"      Skipping patch {i}: {e}")
             continue
 
     # Process remaining images
@@ -124,36 +120,36 @@ def extract_features_from_bcrnet(h5_path, out_path):
             all_features = torch.cat([all_features, chunk_features])
 
     if 'all_features' in locals() and len(all_features) > 0:
-        print(f"  💾 Saving {len(all_features)} features to {os.path.basename(out_path)}")
-        
-        # Save with ResNet50 metadata AND coordinates
+        print(f"   Saving {len(all_features)} features to {os.path.basename(out_path)}")
+
+        # Save with ResNet50 metadata and coordinates
         torch.save({
             'features': all_features,
-            'coords': torch.tensor(coords.T),  # ← ADD THIS LINE (transpose to match UCMC format)
+            'coords': torch.tensor(coords.T),  # transpose to match UCMC format
             'slide_name': os.path.basename(h5_path),
             'num_patches': len(all_features),
             'feature_dim': feature_dim,
             'backbone': 'resnet50'
         }, out_path)
-        
+
         # Clear memory
         del all_features
         torch.cuda.empty_cache()
         gc.collect()
-        
+
         if skipped_patches > 0:
-            print(f"  ⚠️  Skipped {skipped_patches} patches due to errors")
-        
-        print(f"  ✅ Saved features and coordinates for {os.path.basename(h5_path)}")
+            print(f"   Skipped {skipped_patches} patches due to errors")
+
+        print(f"   Saved features and coordinates for {os.path.basename(h5_path)}")
         return True
     else:
-        print(f"  ❌ No valid patches extracted from {h5_path}")
+        print(f"   No valid patches extracted from {h5_path}")
         return False
 
 def extract_features_from_ucmc(tfrecord_path, out_path):
     """Extract features from UCMC tfrecord files using ResNet50"""
-    print(f"  📁 Loading {os.path.basename(tfrecord_path)}...")
-    
+    print(f"   Loading {os.path.basename(tfrecord_path)}...")
+
     feature_description = {
         'image_raw': tf.io.FixedLenFeature([], tf.string),
         'slide': tf.io.FixedLenFeature([], tf.string),
@@ -182,15 +178,15 @@ def extract_features_from_ucmc(tfrecord_path, out_path):
             coords.append([record['loc_x'].numpy(), record['loc_y'].numpy()])
             valid_patches += 1
         except Exception as e:
-            print(f"    ⚠️  Skipping patch in {tfrecord_path}: {e}")
+            print(f"      Skipping patch in {tfrecord_path}: {e}")
             continue
 
     if images:
-        print(f"  🔄 Computing ResNet50 features for {valid_patches} patches...")
+        print(f"   Computing ResNet50 features for {valid_patches} patches...")
         features = extract_features_in_batches(images, batch_size=12)
-        
-        print(f"  💾 Saving features to {os.path.basename(out_path)}")
-        
+
+        print(f"   Saving features to {os.path.basename(out_path)}")
+
         # Save with ResNet50 metadata and coordinates
         torch.save({
             'features': features,
@@ -200,29 +196,29 @@ def extract_features_from_ucmc(tfrecord_path, out_path):
             'feature_dim': feature_dim,
             'backbone': 'resnet50'
         }, out_path)
-        
+
         torch.cuda.empty_cache()
         gc.collect()
-        print(f"  ✅ Saved features and coordinates for {os.path.basename(tfrecord_path)}")
+        print(f"   Saved features and coordinates for {os.path.basename(tfrecord_path)}")
         return True
     else:
-        print(f"  ❌ No valid patches in {tfrecord_path}")
+        print(f"   No valid patches in {tfrecord_path}")
         return False
 
 def run_extraction(manifest_path, out_dir):
     """Run extraction with better progress tracking and error handling"""
     df = pd.read_csv(manifest_path)
-    
+
     total_files = len(df)
     existing_files = 0
     processed_files = 0
     failed_files = 0
     start_time = time.time()
 
-    print(f"\n🚀 Starting ResNet50 extraction for {manifest_path}")
-    print(f"📊 Total files to process: {total_files}")
-    print(f"📁 Output directory: {out_dir}")
-    
+    print(f"\nStarting ResNet50 extraction for {manifest_path}")
+    print(f"Total files to process: {total_files}")
+    print(f"Output directory: {out_dir}")
+
     # Create output directory if it doesn't exist
     os.makedirs(out_dir, exist_ok=True)
 
@@ -231,11 +227,11 @@ def run_extraction(manifest_path, out_dir):
         fname = row['file_name']
         dataset = row['dataset']
 
-        # Progress update every 25 files (more frequent for ResNet50)
+        # Progress update every 25 files
         if idx % 25 == 0 and idx > 0:
             elapsed = time.time() - start_time
             rate = idx / elapsed if elapsed > 0 else 0
-            print(f"  📈 Progress: {idx}/{total_files} ({idx/total_files*100:.1f}%) - {rate:.1f} files/sec")
+            print(f"  Progress: {idx}/{total_files} ({idx/total_files*100:.1f}%) - {rate:.1f} files/sec")
 
         # Prepend correct base path
         if dataset == "UCMC":
@@ -243,20 +239,20 @@ def run_extraction(manifest_path, out_dir):
         elif dataset == "BCRNet":
             full_path = os.path.join("data/raw/BCR_NET", fname)
         else:
-            print(f"❌ Unknown dataset type for {fname}")
+            print(f"Unknown dataset type for {fname}")
             failed_files += 1
             continue
 
         slide_id = os.path.splitext(fname)[0]
         out_path = os.path.join(out_dir, slide_id + ".pt")
 
-        # ✅ CHECK IF FILE ALREADY EXISTS - SKIP IF IT DOES
+        # Check if file already exists - skip if it does
         if os.path.exists(out_path):
             existing_files += 1
             continue
 
-        print(f"\n🔄 [{idx+1}/{total_files}] Processing {fname}...")
-        
+        print(f"\n[{idx+1}/{total_files}] Processing {fname}...")
+
         try:
             success = False
             if fname.endswith(".tfrecords"):
@@ -264,22 +260,22 @@ def run_extraction(manifest_path, out_dir):
             elif fname.endswith(".h5"):
                 success = extract_features_from_bcrnet(full_path, out_path)
             else:
-                print(f"❌ Unsupported file format: {fname}")
+                print(f"Unsupported file format: {fname}")
                 failed_files += 1
                 continue
-            
+
             if success:
                 processed_files += 1
-                print(f"✅ Completed {fname}")
+                print(f"Completed {fname}")
             else:
                 failed_files += 1
-                print(f"❌ Failed {fname}")
-                
+                print(f"Failed {fname}")
+
         except KeyboardInterrupt:
-            print(f"\n⚠️  Process interrupted by user at {fname}")
+            print(f"\nProcess interrupted by user at {fname}")
             break
         except Exception as e:
-            print(f"❌ Unexpected error for {fname}: {e}")
+            print(f"Unexpected error for {fname}: {e}")
             failed_files += 1
             torch.cuda.empty_cache()
             gc.collect()
@@ -287,55 +283,54 @@ def run_extraction(manifest_path, out_dir):
 
     # Print summary
     elapsed = time.time() - start_time
-    print(f"\n📋 RESNET50 EXTRACTION SUMMARY for {os.path.basename(manifest_path)}")
-    print(f"⏱️  Total time: {elapsed:.1f} seconds")
-    print(f"📊 Total files: {total_files}")
-    print(f"⏭️  Already existed (skipped): {existing_files}")
-    print(f"✅ Newly processed: {processed_files}")
-    print(f"❌ Failed: {failed_files}")
-    print(f"📈 Success rate: {processed_files}/{total_files - existing_files} new files")
-    print(f"💾 Features saved with dimension: {feature_dim}")
-    print(f"📍 Coordinates saved for both UCMC and BCR-NET datasets")
+    print(f"\nRESNET50 EXTRACTION SUMMARY for {os.path.basename(manifest_path)}")
+    print(f"Total time: {elapsed:.1f} seconds")
+    print(f"Total files: {total_files}")
+    print(f"Already existed (skipped): {existing_files}")
+    print(f"Newly processed: {processed_files}")
+    print(f"Failed: {failed_files}")
+    print(f"Success rate: {processed_files}/{total_files - existing_files} new files")
+    print(f"Features saved with dimension: {feature_dim}")
+    print(f"Coordinates saved for both UCMC and BCR-NET datasets")
 
 # Main execution
 if __name__ == "__main__":
     print("="*60)
-    print("🚀 RESNET50 FEATURE EXTRACTION WITH COORDINATES")
+    print("RESNET50 FEATURE EXTRACTION WITH COORDINATES")
     print("="*60)
     print(f"Device: {device}")
     print(f"Feature dimension: {feature_dim}")
     print(f"Backbone: ResNet50")
-    print(f"Coordinates: ✅ UCMC and BCR-NET")
     print("="*60)
-    
+
     # Create output directories for ResNet50 features
     base_dirs = {
         "train": "data/features_resnet50/train",
-        "val": "data/features_resnet50/val", 
+        "val": "data/features_resnet50/val",
         "test": "data/features_resnet50/test"
     }
-    
+
     # Create directories
     for dir_path in base_dirs.values():
         os.makedirs(dir_path, exist_ok=True)
-        print(f"📁 Created directory: {dir_path}")
-    
+        print(f"Created directory: {dir_path}")
+
     try:
         # Extract features for each split
         run_extraction("data/manifests/train_manifest.csv", base_dirs["train"])
         run_extraction("data/manifests/val_manifest.csv", base_dirs["val"])
         run_extraction("data/manifests/test_manifest.csv", base_dirs["test"])
-        
+
         print("\n" + "="*60)
-        print("🎉 RESNET50 FEATURE EXTRACTION COMPLETED!")
+        print("RESNET50 FEATURE EXTRACTION COMPLETED")
         print("="*60)
-        print("\n📝 Next steps:")
+        print("\nNext steps:")
         print("1. Update MIL model input_dim from 512 to 2048")
         print("2. Run training scripts with ResNet50 features")
         print("3. Compare performance with ResNet18 features")
         print("4. Use coordinates for interpretability analysis")
-        
+
     except KeyboardInterrupt:
-        print("\n⚠️  Process interrupted by user")
+        print("\nProcess interrupted by user")
     except Exception as e:
-        print(f"\n❌ Unexpected error: {e}")
+        print(f"\nUnexpected error: {e}")

@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-"""
-UNI Feature Extraction for Train/Val/Test Manifests with Coordinates
-Extract features from histopathology images using UNI models for BCR-Net and UCMC datasets.
-"""
-# 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
+
 import os
 import pandas as pd
 from tqdm import tqdm
@@ -21,7 +16,7 @@ import tensorflow as tf
 import numpy as np
 from huggingface_hub import login
 
-# Silence TensorFlow logs
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 tf.get_logger().setLevel('ERROR')
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -52,46 +47,46 @@ ucmc_transform = transforms.Compose([
 def load_uni_model(model_name='uni2-h'):
     """Load UNI model for feature extraction."""
     print(f"Loading {model_name} model...")
-    
+
     # Login to Hugging Face
     login()
-    
+
     if model_name == 'uni':
         model = timm.create_model(
-            "hf-hub:MahmoodLab/uni", 
+            "hf-hub:MahmoodLab/uni",
             pretrained=True,
             img_size=224,
             patch_size=16,
             num_classes=0
         )
         feature_dim = 1024
-        
+
     elif model_name == 'uni2-h':
         timm_kwargs = {
-            'img_size': 224, 
-            'patch_size': 14, 
+            'img_size': 224,
+            'patch_size': 14,
             'depth': 24,
             'num_heads': 24,
-            'init_values': 1e-5, 
+            'init_values': 1e-5,
             'embed_dim': 1536,
             'mlp_ratio': 2.66667*2,
-            'num_classes': 0, 
+            'num_classes': 0,
             'no_embed_class': True,
-            'mlp_layer': timm.layers.SwiGLUPacked, 
-            'act_layer': torch.nn.SiLU, 
-            'reg_tokens': 8, 
+            'mlp_layer': timm.layers.SwiGLUPacked,
+            'act_layer': torch.nn.SiLU,
+            'reg_tokens': 8,
             'dynamic_img_size': True
         }
         model = timm.create_model("hf-hub:MahmoodLab/UNI2-h", pretrained=True, **timm_kwargs)
         feature_dim = 1536
-    
+
     else:
         raise ValueError(f"Unknown model: {model_name}")
-    
+
     # Move to device and set to eval mode
     model = model.to(device)
     model.eval()
-    
+
     print(f"Loaded {model_name} model")
     print(f"Feature dimension: {feature_dim}")
     return model, feature_dim
@@ -109,26 +104,26 @@ def extract_features_in_batches(images, batch_size=16):
             batch = torch.stack(images[i:i + batch_size]).to(device)
             feat = uni_model(batch)
             features.append(feat.cpu())
-            
+
             # Clear GPU cache periodically
             if i % (batch_size * 4) == 0:
                 torch.cuda.empty_cache()
-                
+
     return torch.cat(features)
 
 def extract_features_from_bcrnet(h5_path, out_path):
     """Extract features from BCR-Net H5 files using UNI with coordinates."""
     print(f"Processing BCR-Net file: {os.path.basename(h5_path)}")
-    
+
     with h5py.File(h5_path, 'r') as f:
         patches = f['bag'][:]  # shape [N, 3, H, W] or [N, H, W, 3]
-        coords = f['coords'][:]  # ← ADD THIS LINE
-        print(f"  📊 Found {len(patches)} patches, shape: {patches.shape}")
-        print(f"  📊 Coordinates shape: {coords.shape}")
+        coords = f['coords'][:]
+        print(f"  Found {len(patches)} patches, shape: {patches.shape}")
+        print(f"  Coordinates shape: {coords.shape}")
 
     images = []
     valid_patches = 0
-    
+
     for i, patch in enumerate(tqdm(patches, desc=f"Reading {os.path.basename(h5_path)}")):
         try:
             if patch.shape[0] == 3:
@@ -144,19 +139,19 @@ def extract_features_from_bcrnet(h5_path, out_path):
     if images:
         print(f"Extracted {valid_patches} valid patches, computing UNI features...")
         features = extract_features_in_batches(images)
-        
-        # Save with additional metadata AND coordinates
+
+        # Save with additional metadata and coordinates
         torch.save({
             'features': features,
-            'coords': torch.tensor(coords.T),  # ← ADD THIS LINE (transpose to match UCMC format)
+            'coords': torch.tensor(coords.T),  # transpose to match UCMC format
             'slide_name': os.path.basename(h5_path),
             'num_patches': len(features),
             'feature_dim': feature_dim,
             'backbone': MODEL_NAME
         }, out_path)
-        
+
         print(f"Saved features: {features.shape} to {out_path}")
-        print(f"✅ Saved features and coordinates for {os.path.basename(h5_path)}")
+        print(f"Saved features and coordinates for {os.path.basename(h5_path)}")
         torch.cuda.empty_cache()
     else:
         print(f"No valid patches extracted from {h5_path}")
@@ -164,7 +159,7 @@ def extract_features_from_bcrnet(h5_path, out_path):
 def extract_features_from_ucmc(tfrecord_path, out_path):
     """Extract features from UCMC TFRecord files using UNI."""
     print(f"Processing UCMC file: {os.path.basename(tfrecord_path)}")
-    
+
     feature_description = {
         'image_raw': tf.io.FixedLenFeature([], tf.string),
         'slide': tf.io.FixedLenFeature([], tf.string),
@@ -199,7 +194,7 @@ def extract_features_from_ucmc(tfrecord_path, out_path):
     if images:
         print(f"Extracted {valid_patches} valid patches, computing UNI features...")
         features = extract_features_in_batches(images)
-        
+
         # Save with additional metadata and coordinates
         torch.save({
             'features': features,
@@ -209,9 +204,9 @@ def extract_features_from_ucmc(tfrecord_path, out_path):
             'feature_dim': feature_dim,
             'backbone': MODEL_NAME
         }, out_path)
-        
+
         print(f"Saved features: {features.shape} to {out_path}")
-        print(f"✅ Saved features and coordinates for {os.path.basename(tfrecord_path)}")
+        print(f"Saved features and coordinates for {os.path.basename(tfrecord_path)}")
         torch.cuda.empty_cache()
     else:
         print(f"No valid patches in {tfrecord_path}")
@@ -223,10 +218,10 @@ def run_extraction(manifest_path, out_dir):
     print(f"EXTRACTING FEATURES FROM: {manifest_path}")
     print(f"OUTPUT DIRECTORY: {out_dir}")
     print(f"{'='*60}")
-    
+
     # Create output directory if it doesn't exist
     os.makedirs(out_dir, exist_ok=True)
-    
+
     df = pd.read_csv(manifest_path)
     print(f"Found {len(df)} files to process")
 
@@ -265,9 +260,9 @@ def run_extraction(manifest_path, out_dir):
                 print(f"Unsupported file format: {fname}")
                 failed += 1
                 continue
-            
+
             successful += 1
-            
+
         except Exception as e:
             print(f"Failed for {fname}: {e}")
             failed += 1
@@ -275,7 +270,7 @@ def run_extraction(manifest_path, out_dir):
             continue
 
     print(f"\nCompleted {os.path.basename(manifest_path)}: {successful} successful, {failed} failed")
-    print(f"📍 Coordinates saved for both UCMC and BCR-NET datasets")
+    print(f"Coordinates saved for both UCMC and BCR-NET datasets")
 
 # -------------- Main --------------
 if __name__ == "__main__":
@@ -285,27 +280,24 @@ if __name__ == "__main__":
     print(f"Device: {device}")
     print(f"Feature dimension: {feature_dim}")
     print(f"Backbone: {MODEL_NAME}")
-    print(f"Coordinates: ✅ UCMC and BCR-NET")
     print("="*60)
-    
+
     # Create output directories for UNI features
     base_dirs = {
         "train": f"data/features_{MODEL_NAME}/train",
-        "val": f"data/features_{MODEL_NAME}/val", 
+        "val": f"data/features_{MODEL_NAME}/val",
         "test": f"data/features_{MODEL_NAME}/test"
     }
-    
+
     # Create directories
     for dir_path in base_dirs.values():
         os.makedirs(dir_path, exist_ok=True)
-    
+
     # Run extraction for each split
     run_extraction("data/manifests/train_manifest.csv", base_dirs["train"])
     run_extraction("data/manifests/val_manifest.csv", base_dirs["val"])
     run_extraction("data/manifests/test_manifest.csv", base_dirs["test"])
-    
-  
+
     print("\n" + "="*60)
     print(f"UNI ({MODEL_NAME.upper()}) FEATURE EXTRACTION COMPLETED")
-    print("📍 Coordinates saved for interpretability analysis")
-    print("🎯 Next steps: Use coordinates for attention visualization")
+    print("Next steps: Use coordinates for attention visualization")

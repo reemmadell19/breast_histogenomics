@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Feature extraction script for ECU dataset using ResNet18.
-Processes JPEG-encoded 224x224 patches from tfrecord files.
-"""
-
 import os
 import torch
 import pandas as pd
@@ -48,12 +42,12 @@ def extract_features_in_batches(images, batch_size=32):
 def extract_features_from_ecu_tfrecord(tfrecord_path, out_path):
     """
     Extract features from a single ECU tfrecord file.
-    
+
     Args:
         tfrecord_path: Path to the tfrecord file
         out_path: Path to save the extracted features (.pt file)
     """
-    
+
     # Define the feature description for ECU tfrecords
     feature_description = {
         'image': tf.io.FixedLenFeature([], tf.string),
@@ -82,21 +76,21 @@ def extract_features_from_ecu_tfrecord(tfrecord_path, out_path):
             # Decode JPEG image
             img_bytes = record['image'].numpy()
             img = tf.io.decode_jpeg(img_bytes).numpy()
-            
+
             # Convert to PIL and apply transforms
             pil_img = Image.fromarray(img.astype('uint8'))
             tensor_img = ecu_transform(pil_img)
             images.append(tensor_img)
-            
+
             # Store coordinates (using global coordinates for consistency)
             coords.append([
-                record['global_x'].numpy(), 
+                record['global_x'].numpy(),
                 record['global_y'].numpy()
             ])
-            
+
             # Store DA number (original tile ID)
             da_numbers.append(record['da_number'].numpy())
-            
+
         except Exception as e:
             print(f"  Warning: Skipping patch in {os.path.basename(tfrecord_path)}: {e}")
             continue
@@ -104,7 +98,7 @@ def extract_features_from_ecu_tfrecord(tfrecord_path, out_path):
     # Extract features if we have valid patches
     if images:
         features = extract_features_in_batches(images)
-        
+
         # Save in consistent format with UCMC/BCR-NET
         torch.save({
             'features': features,  # Shape: [N, 512]
@@ -113,7 +107,7 @@ def extract_features_from_ecu_tfrecord(tfrecord_path, out_path):
             'da_numbers': torch.tensor(da_numbers),  # ECU-specific: original tile IDs
             'num_patches': len(images)
         }, out_path)
-        
+
         torch.cuda.empty_cache()
         return len(images)
     else:
@@ -123,16 +117,16 @@ def extract_features_from_ecu_tfrecord(tfrecord_path, out_path):
 def run_ecu_extraction(input_dir, output_dir, manifest_csv=None):
     """
     Run feature extraction for all ECU tfrecord files.
-    
+
     Args:
         input_dir: Directory containing ECU tfrecord files
         output_dir: Directory to save extracted features
         manifest_csv: Optional CSV with file names and RS scores
     """
-    
+
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
-    
+
     # Get list of tfrecord files
     if manifest_csv and os.path.exists(manifest_csv):
         # Use manifest if provided
@@ -142,49 +136,49 @@ def run_ecu_extraction(input_dir, output_dir, manifest_csv=None):
             print(f"Using manifest with {len(tfrecord_files)} files")
         else:
             print(f"Warning: 'file_name' column not found in manifest")
-            tfrecord_files = [f for f in os.listdir(input_dir) 
+            tfrecord_files = [f for f in os.listdir(input_dir)
                             if f.endswith(('.tfrecord', '.tfrecords'))]
     else:
         # Scan directory for tfrecord files
-        tfrecord_files = [f for f in os.listdir(input_dir) 
+        tfrecord_files = [f for f in os.listdir(input_dir)
                          if f.endswith(('.tfrecord', '.tfrecords'))]
         tfrecord_files.sort()  # Sort for consistent ordering
         print(f"Found {len(tfrecord_files)} tfrecord files in directory")
-    
+
     # Processing statistics
     total_files = len(tfrecord_files)
     existing_files = 0
     processed_files = 0
     failed_files = 0
     total_patches = 0
-    
-    print(f"\n" + "="*60)
-    print(f"ECU FEATURE EXTRACTION")
-    print(f"="*60)
+
+    print("\n" + "="*60)
+    print("ECU FEATURE EXTRACTION")
+    print("="*60)
     print(f"Input directory: {input_dir}")
     print(f"Output directory: {output_dir}")
     print(f"Total files to process: {total_files}")
     print(f"Device: {device}")
-    print(f"="*60 + "\n")
-    
+    print("="*60 + "\n")
+
     # Process each tfrecord file
     for tfrecord_file in tqdm(tfrecord_files, desc="Processing ECU files"):
         # Get paths
         base_name = os.path.splitext(tfrecord_file)[0]
         input_path = os.path.join(input_dir, tfrecord_file)
         output_path = os.path.join(output_dir, f"{base_name}.pt")
-        
+
         # Skip if already processed
         if os.path.exists(output_path):
             existing_files += 1
             continue
-        
+
         # Check if input exists
         if not os.path.exists(input_path):
-            print(f"  ❌ File not found: {tfrecord_file}")
+            print(f"  File not found: {tfrecord_file}")
             failed_files += 1
             continue
-        
+
         # Process the file
         try:
             num_patches = extract_features_from_ecu_tfrecord(input_path, output_path)
@@ -193,71 +187,71 @@ def run_ecu_extraction(input_dir, output_dir, manifest_csv=None):
                 total_patches += num_patches
             else:
                 failed_files += 1
-                
+
         except Exception as e:
-            print(f"  ❌ Failed processing {tfrecord_file}: {e}")
+            print(f"  Failed processing {tfrecord_file}: {e}")
             failed_files += 1
             torch.cuda.empty_cache()
             continue
-    
+
     # Print summary
-    print(f"\n" + "="*60)
-    print(f"EXTRACTION SUMMARY")
-    print(f"="*60)
+    print("\n" + "="*60)
+    print("EXTRACTION SUMMARY")
+    print("="*60)
     print(f"Total files: {total_files}")
     print(f"Already existed (skipped): {existing_files}")
     print(f"Successfully processed: {processed_files}")
     print(f"Failed: {failed_files}")
-    
+
     if processed_files > 0:
         avg_patches = total_patches / processed_files
         print(f"Total patches processed: {total_patches}")
         print(f"Average patches per slide: {avg_patches:.1f}")
-    
+
     if total_files - existing_files > 0:
         success_rate = (processed_files / (total_files - existing_files)) * 100
         print(f"Success rate: {success_rate:.1f}%")
-    
-    print(f"="*60)
+
+    print("="*60)
 
 def verify_extraction(output_dir, sample_file=None):
     """
     Verify extracted features by loading and checking a sample.
-    
+
     Args:
         output_dir: Directory containing extracted features
         sample_file: Optional specific file to check
     """
-    print(f"\n" + "="*60)
-    print(f"VERIFICATION")
-    print(f"="*60)
-    
+    print("\n" + "="*60)
+    print("VERIFICATION")
+    print("="*60)
+
     pt_files = [f for f in os.listdir(output_dir) if f.endswith('.pt')]
-    
+
     if not pt_files:
         print("No .pt files found to verify")
         return
-    
+
     # Check a sample file
     if sample_file and sample_file in pt_files:
         check_file = sample_file
     else:
         check_file = pt_files[0]
-    
+
     sample_path = os.path.join(output_dir, check_file)
     data = torch.load(sample_path)
-    
+
     print(f"Sample file: {check_file}")
     print(f"Keys in file: {list(data.keys())}")
     print(f"Feature shape: {data['features'].shape}")
     print(f"Coords shape: {data['coords'].shape}")
     print(f"Number of patches: {data.get('num_patches', len(data['features']))}")
-    
+
     if 'da_numbers' in data:
         unique_das = len(torch.unique(data['da_numbers']))
         print(f"Unique DA numbers (original tiles): {unique_das}")
-    
-    print(f"\n✅ Extraction verified successfully!")
+
+    print(f"\nExtraction verified successfully!")
 
 # -------------- Main --------------
 if __name__ == "__main__":
@@ -266,20 +260,20 @@ if __name__ == "__main__":
     ECU_OUTPUT_DIR = "data/features_resnet18/ecu"  # Where to save features
     ECU_MANIFEST = "data/manifests/ecu_manifest.csv"  # Optional: CSV with file info
     # =========================================
-    
+
     print("="*60)
     print("ECU Dataset ResNet18 Feature Extraction")
     print("="*60)
-    
+
     # Run extraction
     run_ecu_extraction(
         input_dir=ECU_INPUT_DIR,
         output_dir=ECU_OUTPUT_DIR,
         manifest_csv=ECU_MANIFEST if os.path.exists(ECU_MANIFEST) else None
     )
-    
+
     # Verify results
     if os.path.exists(ECU_OUTPUT_DIR):
         verify_extraction(ECU_OUTPUT_DIR)
-    
-    print("\n🎉 ECU feature extraction completed!")
+
+    print("\nECU feature extraction completed!")

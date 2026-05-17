@@ -8,7 +8,6 @@ import h5py
 import tensorflow as tf
 import numpy as np
 
-# Silence TensorFlow logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 tf.get_logger().setLevel('ERROR')
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -48,7 +47,7 @@ def extract_features_in_batches(images, batch_size=32):
 def extract_features_from_bcrnet(h5_path, out_path):
     with h5py.File(h5_path, 'r') as f:
         patches = f['bag'][:]
-        coords = f['coords'][:]  # ← ADD THIS
+        coords = f['coords'][:]
 
     images = []
     for i, patch in enumerate(tqdm(patches, desc=f"Reading {os.path.basename(h5_path)}")):
@@ -66,11 +65,11 @@ def extract_features_from_bcrnet(h5_path, out_path):
         features = extract_features_in_batches(images)
         torch.save({
             'features': features,
-            'coords': torch.tensor(coords.T),  # ← ADD THIS (transpose to match UCMC format)
+            'coords': torch.tensor(coords.T),  # transpose to match UCMC format
             'slide_name': os.path.basename(h5_path)
         }, out_path)
         torch.cuda.empty_cache()
-        
+
 def extract_features_from_ucmc(tfrecord_path, out_path):
     feature_description = {
         'image_raw': tf.io.FixedLenFeature([], tf.string),
@@ -114,7 +113,7 @@ def extract_features_from_ucmc(tfrecord_path, out_path):
 
 def run_extraction(manifest_path, out_dir):
     df = pd.read_csv(manifest_path)
-    
+
     # Count total files and existing files
     total_files = len(df)
     existing_files = 0
@@ -123,7 +122,7 @@ def run_extraction(manifest_path, out_dir):
 
     print(f"Starting extraction for {manifest_path}")
     print(f"Total files to process: {total_files}")
-    
+
     # Create output directory if it doesn't exist
     os.makedirs(out_dir, exist_ok=True)
 
@@ -143,15 +142,15 @@ def run_extraction(manifest_path, out_dir):
         slide_id = os.path.splitext(fname)[0]
         out_path = os.path.join(out_dir, slide_id + ".pt")
 
-        # ✅ CHECK IF FILE ALREADY EXISTS - SKIP IF IT DOES
+        # Check if file already exists - skip if it does
         if os.path.exists(out_path):
             existing_files += 1
             # Uncomment the line below if you want to see each skipped file
-            # print(f"⏭️  Skipping {fname} (already processed)")
+            # print(f"Skipping {fname} (already processed)")
             continue
 
         try:
-            print(f"🔄 Processing {fname}...")
+            print(f"Processing {fname}...")
             if fname.endswith(".tfrecords"):
                 extract_features_from_ucmc(full_path, out_path)
             elif fname.endswith(".h5"):
@@ -160,12 +159,12 @@ def run_extraction(manifest_path, out_dir):
                 print(f"Unsupported file format: {fname}")
                 failed_files += 1
                 continue
-            
+
             processed_files += 1
-            print(f"✅ Completed {fname}")
-            
+            print(f"Completed {fname}")
+
         except Exception as e:
-            print(f"❌ Failed for {fname}: {e}")
+            print(f"Failed for {fname}: {e}")
             failed_files += 1
             torch.cuda.empty_cache()
             continue
@@ -181,10 +180,10 @@ def run_extraction(manifest_path, out_dir):
 # -------------- Main --------------
 if __name__ == "__main__":
     print("Starting ResNet18 feature extraction with skip logic...")
-    
+
     # Extract features for each split
     run_extraction("data/manifests/train_manifest.csv", "data/features_resnet18/train")
     run_extraction("data/manifests/val_manifest.csv", "data/features_resnet18/val")
     run_extraction("data/manifests/test_manifest.csv", "data/features_resnet18/test")
-    
-    print("\n🎉 Feature extraction completed!")
+
+    print("\nFeature extraction completed!")
