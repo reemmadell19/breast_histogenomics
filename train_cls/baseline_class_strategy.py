@@ -1,9 +1,3 @@
-# baseline_class_balancing_experiments.py
-"""
-Baseline experiments for ResNet-18 + Mean Pooling with different class balancing strategies
-For MSc Thesis Chapter 4, Section 4.4: Class Imbalance Strategy Selection
-"""
-
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
