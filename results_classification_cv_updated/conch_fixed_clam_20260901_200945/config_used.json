@@ -1,0 +1,37 @@
+{
+  "model_name": "conch_fixed",
+  "mil_architecture": "clam",
+  "global_config": {
+    "num_epochs": 100,
+    "batch_size": 1,
+    "optimizer_type": "adam",
+    "use_class_balancing": true,
+    "use_gradient_clip": true,
+    "gradient_clip_val": 1.0,
+    "focal_loss": {
+      "gamma": 2.0,
+      "alpha": [
+        0.25,
+        0.75
+      ]
+    },
+    "n_folds": 5,
+    "random_seed": 42,
+    "use_early_stopping": true,
+    "patience": 15
+  },
+  "architecture_specific_params": {
+    "hidden_dim": 512,
+    "dropout": 0.25,
+    "learning_rate": 0.0002,
+    "weight_decay": 1e-05,
+    "use_scheduler": false,
+    "scheduler_type": null,
+    "attention_hidden_dim": 256,
+    "gate": true,
+    "use_instance_learning": true,
+    "k_sample": 8,
+    "instance_loss_fn": "svm",
+    "instance_loss_weight": 0.3
+  }
+}
