@@ -1,0 +1,48 @@
+
+============================================================
+SUMMARY STATISTICS
+============================================================
+
+1. Feature Extractor Comparison:
+   ImageNet Models (n=8):
+      Internal AUROC: 0.651 ± 0.017
+      External AUROC: 0.597 ± 0.026
+      Avg Drop: 8.2%
+   Foundation Models (n=20):
+      Internal AUROC: 0.760 ± 0.031
+      External AUROC: 0.685 ± 0.038
+      Avg Drop: 9.9%
+   Mann-Whitney U test: p = 1.287e-06
+
+2. MIL Architecture Comparison:
+   ACMIL:
+      Internal AUROC: 0.733 ± 0.058
+      External AUROC: 0.666 ± 0.054
+      Avg Drop: 9.1%
+   ATTENTION:
+      Internal AUROC: 0.731 ± 0.065
+      External AUROC: 0.666 ± 0.068
+      Avg Drop: 8.9%
+   MEAN:
+      Internal AUROC: 0.720 ± 0.054
+      External AUROC: 0.653 ± 0.053
+      Avg Drop: 9.2%
+   CLAM:
+      Internal AUROC: 0.732 ± 0.065
+      External AUROC: 0.652 ± 0.046
+      Avg Drop: 10.6%
+
+3. Generalization Metrics:
+   Average AUROC Drop: 9.4% ± 4.9%
+   Best Generalizer: resnet18_clam (-0.7% drop)
+   Worst Generalizer: musk_mean (17.4% drop)
+
+4. Best Overall Model:
+   Model: h-optimus_acmil
+   External AUROC: 0.755 ± 0.041
+   External F1-Score: 0.165
+   External Sensitivity: 0.220
+   External Specificity: 0.903
+   External MCC: 0.184
+
+============================================================
