@@ -1,0 +1,5 @@
+slide_id,true_label,ensemble_pred,vote_confidence
+243,0,0,0.8
+256,0,0,0.8
+323,0,0,0.8
+395,0,1,0.6
