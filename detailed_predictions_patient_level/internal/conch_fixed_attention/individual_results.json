@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/conch_fixed_attention_20261030_061606",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7916666666666666,
+      "best_epoch": 6,
+      "accuracy": 0.608,
+      "balanced_accuracy": 0.5985973597359736,
+      "precision": 0.2641509433962264,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.36363636363636365,
+      "cohen_kappa": 0.1350091794944216,
+      "specificity": 0.6138613861386139,
+      "npv": 0.8611111111111112,
+      "ppv": 0.2641509433962264,
+      "mcc": 0.15716556779095792,
+      "auroc": 0.6695544554455446,
+      "auc_pr": 0.5569670531977604,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.7726608187134502,
+      "best_epoch": 6,
+      "accuracy": 0.672,
+      "balanced_accuracy": 0.6382013201320131,
+      "precision": 0.3111111111111111,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4057971014492754,
+      "cohen_kappa": 0.20726991492652747,
+      "specificity": 0.693069306930693,
+      "npv": 0.875,
+      "ppv": 0.3111111111111111,
+      "mcc": 0.22680741278358318,
+      "auroc": 0.679042904290429,
+      "auc_pr": 0.5372902945460936,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.783179012345679,
+      "best_epoch": 7,
+      "accuracy": 0.672,
+      "balanced_accuracy": 0.6382013201320131,
+      "precision": 0.3111111111111111,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4057971014492754,
+      "cohen_kappa": 0.20726991492652747,
+      "specificity": 0.693069306930693,
+      "npv": 0.875,
+      "ppv": 0.3111111111111111,
+      "mcc": 0.22680741278358318,
+      "auroc": 0.6901815181518152,
+      "auc_pr": 0.5265714480386761,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.9310600444773907,
+      "best_epoch": 33,
+      "accuracy": 0.704,
+      "balanced_accuracy": 0.658003300330033,
+      "precision": 0.34146341463414637,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4307692307692308,
+      "cohen_kappa": 0.24882247847977912,
+      "specificity": 0.7326732673267327,
+      "npv": 0.8809523809523809,
+      "ppv": 0.34146341463414637,
+      "mcc": 0.2651129183883777,
+      "auroc": 0.6996699669966997,
+      "auc_pr": 0.5100692820572088,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8791697553743514,
+      "best_epoch": 6,
+      "accuracy": 0.68,
+      "balanced_accuracy": 0.6431518151815181,
+      "precision": 0.3181818181818182,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4117647058823529,
+      "cohen_kappa": 0.21728240450845338,
+      "specificity": 0.7029702970297029,
+      "npv": 0.8765432098765432,
+      "ppv": 0.3181818181818182,
+      "mcc": 0.23611540071679563,
+      "auroc": 0.6984323432343233,
+      "auc_pr": 0.562810431175835,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6873762376237623,
+      "std": 0.012925780599834753,
+      "min": 0.6695544554455446,
+      "max": 0.6996699669966997
+    },
+    "auc_pr": {
+      "mean": 0.5387417018031148,
+      "std": 0.021701362174282642,
+      "min": 0.5100692820572088,
+      "max": 0.562810431175835
+    },
+    "accuracy": {
+      "mean": 0.6672,
+      "std": 0.03559775273805919,
+      "min": 0.608,
+      "max": 0.704
+    },
+    "balanced_accuracy": {
+      "mean": 0.6352310231023102,
+      "std": 0.022028312337907884,
+      "min": 0.5985973597359736,
+      "max": 0.658003300330033
+    },
+    "f1_score": {
+      "mean": 0.40355290063729965,
+      "std": 0.02455384476995907,
+      "min": 0.36363636363636365,
+      "max": 0.4307692307692308
+    },
+    "sensitivity": {
+      "mean": 0.5833333333333334,
+      "std": 0.0,
+      "min": 0.5833333333333334,
+      "max": 0.5833333333333334
+    },
+    "specificity": {
+      "mean": 0.6871287128712871,
+      "std": 0.044056624675815816,
+      "min": 0.6138613861386139,
+      "max": 0.7326732673267327
+    },
+    "mcc": {
+      "mean": 0.2224017424926595,
+      "std": 0.03970795675749062,
+      "min": 0.15716556779095792,
+      "max": 0.2651129183883777
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.68,
+    "majority_vote_accuracy": 0.672,
+    "agreement_rate": 0.76,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7029702970297029,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "conch_fixed",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/conch_fixed_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

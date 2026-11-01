@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/dinov2_attention_20261030_042109",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7229532163742689,
+      "best_epoch": 2,
+      "accuracy": 0.656,
+      "balanced_accuracy": 0.5806518151815181,
+      "precision": 0.2682926829268293,
+      "recall": 0.4583333333333333,
+      "sensitivity": 0.4583333333333333,
+      "f1_score": 0.3384615384615385,
+      "cohen_kappa": 0.127009907422446,
+      "specificity": 0.7029702970297029,
+      "npv": 0.8452380952380952,
+      "ppv": 0.2682926829268293,
+      "mcc": 0.13532526251939384,
+      "auroc": 0.5668316831683168,
+      "auc_pr": 0.2545284181100802,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.4451754385964912,
+      "best_epoch": 2,
+      "accuracy": 0.384,
+      "balanced_accuracy": 0.44410066006600657,
+      "precision": 0.16455696202531644,
+      "recall": 0.5416666666666666,
+      "sensitivity": 0.5416666666666666,
+      "f1_score": 0.2524271844660194,
+      "cohen_kappa": -0.05967191456567211,
+      "specificity": 0.3465346534653465,
+      "npv": 0.7608695652173914,
+      "ppv": 0.16455696202531644,
+      "mcc": -0.09130835562771104,
+      "auroc": 0.49257425742574257,
+      "auc_pr": 0.24291385272521432,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.658179012345679,
+      "best_epoch": 12,
+      "accuracy": 0.552,
+      "balanced_accuracy": 0.5321782178217822,
+      "precision": 0.21428571428571427,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.3,
+      "cohen_kappa": 0.0426695842450765,
+      "specificity": 0.5643564356435643,
+      "npv": 0.8260869565217391,
+      "ppv": 0.21428571428571427,
+      "mcc": 0.05097294567296151,
+      "auroc": 0.5478547854785478,
+      "auc_pr": 0.28813321699437616,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.614529280948851,
+      "best_epoch": 3,
+      "accuracy": 0.688,
+      "balanced_accuracy": 0.5210396039603961,
+      "precision": 0.2222222222222222,
+      "recall": 0.25,
+      "sensitivity": 0.25,
+      "f1_score": 0.23529411764705882,
+      "cohen_kappa": 0.04016538688718252,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8163265306122449,
+      "ppv": 0.2222222222222222,
+      "mcc": 0.040275314841832895,
+      "auroc": 0.5045379537953796,
+      "auc_pr": 0.26047547994999853,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.6123054114158636,
+      "best_epoch": 1,
+      "accuracy": 0.704,
+      "balanced_accuracy": 0.4674092409240924,
+      "precision": 0.11764705882352941,
+      "recall": 0.08333333333333333,
+      "sensitivity": 0.08333333333333333,
+      "f1_score": 0.0975609756097561,
+      "cohen_kappa": -0.07333488048271053,
+      "specificity": 0.8514851485148515,
+      "npv": 0.7962962962962963,
+      "ppv": 0.11764705882352941,
+      "mcc": -0.07489527862516697,
+      "auroc": 0.6010726072607261,
+      "auc_pr": 0.2487531982468073,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.5425742574257426,
+      "std": 0.044679760539449644,
+      "min": 0.49257425742574257,
+      "max": 0.6010726072607261
+    },
+    "auc_pr": {
+      "mean": 0.25896083320529534,
+      "std": 0.01756893443160971,
+      "min": 0.24291385272521432,
+      "max": 0.28813321699437616
+    },
+    "accuracy": {
+      "mean": 0.5968,
+      "std": 0.13285781873868016,
+      "min": 0.384,
+      "max": 0.704
+    },
+    "balanced_accuracy": {
+      "mean": 0.5090759075907592,
+      "std": 0.054216812932636825,
+      "min": 0.44410066006600657,
+      "max": 0.5806518151815181
+    },
+    "f1_score": {
+      "mean": 0.2447487632368746,
+      "std": 0.09171610641884316,
+      "min": 0.0975609756097561,
+      "max": 0.3384615384615385
+    },
+    "sensitivity": {
+      "mean": 0.36666666666666664,
+      "std": 0.19409691164753523,
+      "min": 0.08333333333333333,
+      "max": 0.5416666666666666
+    },
+    "specificity": {
+      "mean": 0.6514851485148515,
+      "std": 0.20186853834574053,
+      "min": 0.3465346534653465,
+      "max": 0.8514851485148515
+    },
+    "mcc": {
+      "mean": 0.012073977756262047,
+      "std": 0.09453951915153617,
+      "min": -0.09130835562771104,
+      "max": 0.13532526251939384
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.648,
+    "majority_vote_accuracy": 0.648,
+    "agreement_rate": 0.352,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7128712871287128,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.375
+  },
+  "config": {
+    "model_name": "dinov2",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/dinov2_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "model_folder": "retrained_models_patient_level/virchow2_mean_20261030_015404",
+  "cohort": "ecu",
+  "n_samples": 212,
+  "n_high_risk": 30,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7536549707602339,
+      "best_epoch": 1,
+      "accuracy": 0.660377358490566,
+      "balanced_accuracy": 0.5934065934065934,
+      "precision": 0.20833333333333334,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.29411764705882354,
+      "cohen_kappa": 0.11789181692094308,
+      "specificity": 0.6868131868131868,
+      "npv": 0.8928571428571429,
+      "ppv": 0.20833333333333334,
+      "mcc": 0.13749078271755805,
+      "auroc": 0.6404761904761904,
+      "auc_pr": 0.2515099183968089,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.6900584795321638,
+      "best_epoch": 1,
+      "accuracy": 0.8018867924528302,
+      "balanced_accuracy": 0.5923076923076923,
+      "precision": 0.3,
+      "recall": 0.3,
+      "sensitivity": 0.3,
+      "f1_score": 0.3,
+      "cohen_kappa": 0.18461538461538463,
+      "specificity": 0.8846153846153846,
+      "npv": 0.8846153846153846,
+      "ppv": 0.3,
+      "mcc": 0.18461538461538463,
+      "auroc": 0.7261904761904762,
+      "auc_pr": 0.32719998839771514,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7723765432098766,
+      "best_epoch": 2,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": 0.0,
+      "specificity": 1.0,
+      "npv": 0.8584905660377359,
+      "ppv": 0.0,
+      "mcc": 0.0,
+      "auroc": 0.6622710622710624,
+      "auc_pr": 0.2265718874542298,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.8561897702001482,
+      "best_epoch": 2,
+      "accuracy": 0.839622641509434,
+      "balanced_accuracy": 0.5168498168498169,
+      "precision": 0.25,
+      "recall": 0.06666666666666667,
+      "sensitivity": 0.06666666666666667,
+      "f1_score": 0.10526315789473684,
+      "cohen_kappa": 0.04857444561774027,
+      "specificity": 0.967032967032967,
+      "npv": 0.8627450980392157,
+      "ppv": 0.25,
+      "mcc": 0.06163982888807251,
+      "auroc": 0.7238095238095238,
+      "auc_pr": 0.26155627384324365,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8539659006671608,
+      "best_epoch": 3,
+      "accuracy": 0.8443396226415094,
+      "balanced_accuracy": 0.5335164835164835,
+      "precision": 0.3333333333333333,
+      "recall": 0.1,
+      "sensitivity": 0.1,
+      "f1_score": 0.15384615384615385,
+      "cohen_kappa": 0.09472049689440987,
+      "specificity": 0.967032967032967,
+      "npv": 0.8669950738916257,
+      "ppv": 0.3333333333333333,
+      "mcc": 0.11588186880300762,
+      "auroc": 0.73003663003663,
+      "auc_pr": 0.30236643205161384,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6965567765567766,
+      "std": 0.042018779477331805,
+      "min": 0.6404761904761904,
+      "max": 0.73003663003663
+    },
+    "auc_pr": {
+      "mean": 0.27384090002872225,
+      "std": 0.040450100802372324,
+      "min": 0.2265718874542298,
+      "max": 0.32719998839771514
+    },
+    "accuracy": {
+      "mean": 0.8009433962264151,
+      "std": 0.08131834694154699,
+      "min": 0.660377358490566,
+      "max": 0.8584905660377359
+    },
+    "balanced_accuracy": {
+      "mean": 0.5472161172161172,
+      "std": 0.04331848370311666,
+      "min": 0.5,
+      "max": 0.5934065934065934
+    },
+    "f1_score": {
+      "mean": 0.17064539175994284,
+      "std": 0.12811607347452894,
+      "min": 0.0,
+      "max": 0.3
+    },
+    "sensitivity": {
+      "mean": 0.19333333333333333,
+      "std": 0.20466775244011667,
+      "min": 0.0,
+      "max": 0.5
+    },
+    "specificity": {
+      "mean": 0.9010989010989011,
+      "std": 0.1271476534660015,
+      "min": 0.6868131868131868,
+      "max": 1.0
+    },
+    "mcc": {
+      "mean": 0.09992557300480456,
+      "std": 0.07121978462812993,
+      "min": 0.0,
+      "max": 0.18461538461538463
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 212,
+    "ensemble_accuracy": 0.8537735849056604,
+    "majority_vote_accuracy": 0.8443396226415094,
+    "agreement_rate": 0.6556603773584906,
+    "class_0_samples": 182,
+    "class_0_ensemble_accuracy": 0.978021978021978,
+    "class_1_samples": 30,
+    "class_1_ensemble_accuracy": 0.1
+  },
+  "config": {
+    "model_name": "virchow2",
+    "mil_architecture": "mean",
+    "dev_manifest": "data/manifests/virchow2_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null
+    }
+  }
+}

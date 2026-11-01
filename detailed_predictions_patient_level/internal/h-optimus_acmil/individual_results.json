@@ -1,0 +1,220 @@
+{
+  "model_folder": "retrained_models_patient_level/h-optimus_acmil_20261030_030819",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.763157894736842,
+      "best_epoch": 2,
+      "accuracy": 0.744,
+      "balanced_accuracy": 0.6668729372937294,
+      "precision": 0.38235294117647056,
+      "recall": 0.5416666666666666,
+      "sensitivity": 0.5416666666666666,
+      "f1_score": 0.4482758620689655,
+      "cohen_kappa": 0.2880028479886081,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8791208791208791,
+      "ppv": 0.38235294117647056,
+      "mcc": 0.2954078686102708,
+      "auroc": 0.7359735973597359,
+      "auc_pr": 0.49943998404251266,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.6535087719298245,
+      "best_epoch": 1,
+      "accuracy": 0.712,
+      "balanced_accuracy": 0.6788366336633663,
+      "precision": 0.35714285714285715,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.45454545454545453,
+      "cohen_kappa": 0.2781520692974013,
+      "specificity": 0.7326732673267327,
+      "npv": 0.891566265060241,
+      "ppv": 0.35714285714285715,
+      "mcc": 0.29825593766486147,
+      "auroc": 0.7029702970297029,
+      "auc_pr": 0.4458427533595727,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.820216049382716,
+      "best_epoch": 3,
+      "accuracy": 0.848,
+      "balanced_accuracy": 0.7629950495049505,
+      "precision": 0.6,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.6122448979591837,
+      "cohen_kappa": 0.5177664974619289,
+      "specificity": 0.900990099009901,
+      "npv": 0.91,
+      "ppv": 0.6,
+      "mcc": 0.517933345610272,
+      "auroc": 0.7904290429042904,
+      "auc_pr": 0.6223519736700112,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.8806523350630098,
+      "best_epoch": 3,
+      "accuracy": 0.752,
+      "balanced_accuracy": 0.6877062706270627,
+      "precision": 0.4,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4745762711864407,
+      "cohen_kappa": 0.31957857769973663,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8888888888888888,
+      "ppv": 0.4,
+      "mcc": 0.32932128980352676,
+      "auroc": 0.7297854785478549,
+      "auc_pr": 0.4401789510625426,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8421052631578947,
+      "best_epoch": 4,
+      "accuracy": 0.76,
+      "balanced_accuracy": 0.6926567656765676,
+      "precision": 0.4117647058823529,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4827586206896552,
+      "cohen_kappa": 0.3325026699893201,
+      "specificity": 0.801980198019802,
+      "npv": 0.8901098901098901,
+      "ppv": 0.4117647058823529,
+      "mcc": 0.3410518532533905,
+      "auroc": 0.7425742574257426,
+      "auc_pr": 0.4543173056600106,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.7403465346534654,
+      "std": 0.03178388745493845,
+      "min": 0.7029702970297029,
+      "max": 0.7904290429042904
+    },
+    "auc_pr": {
+      "mean": 0.49242619355892997,
+      "std": 0.07629216896345983,
+      "min": 0.4401789510625426,
+      "max": 0.6223519736700112
+    },
+    "accuracy": {
+      "mean": 0.7632,
+      "std": 0.050785824793932406,
+      "min": 0.712,
+      "max": 0.848
+    },
+    "balanced_accuracy": {
+      "mean": 0.6978135313531354,
+      "std": 0.03773202309338894,
+      "min": 0.6668729372937294,
+      "max": 0.7629950495049505
+    },
+    "f1_score": {
+      "mean": 0.49448022128993996,
+      "std": 0.06732702025807322,
+      "min": 0.4482758620689655,
+      "max": 0.6122448979591837
+    },
+    "sensitivity": {
+      "mean": 0.5916666666666667,
+      "std": 0.034860834438919824,
+      "min": 0.5416666666666666,
+      "max": 0.625
+    },
+    "specificity": {
+      "mean": 0.803960396039604,
+      "std": 0.06079240171488615,
+      "min": 0.7326732673267327,
+      "max": 0.900990099009901
+    },
+    "mcc": {
+      "mean": 0.3563940589884643,
+      "std": 0.09241565857353938,
+      "min": 0.2954078686102708,
+      "max": 0.517933345610272
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.736,
+    "majority_vote_accuracy": 0.784,
+    "agreement_rate": 0.656,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7722772277227723,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "h-optimus",
+    "mil_architecture": "acmil",
+    "dev_manifest": "data/manifests/h-optimus_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "use_scheduler": true,
+      "scheduler_type": "cosine",
+      "n_branches": 5,
+      "top_k": 10,
+      "mask_ratio": 0.6,
+      "lambda_p": 1.0,
+      "lambda_d": 1.0,
+      "gate": true
+    }
+  }
+}

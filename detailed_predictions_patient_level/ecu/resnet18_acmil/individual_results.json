@@ -1,0 +1,220 @@
+{
+  "model_folder": "retrained_models_patient_level/resnet18_acmil_20261030_051229",
+  "cohort": "ecu",
+  "n_samples": 212,
+  "n_high_risk": 30,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7119883040935673,
+      "best_epoch": 13,
+      "accuracy": 0.8537735849056604,
+      "balanced_accuracy": 0.49725274725274726,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": -0.00921375921375911,
+      "specificity": 0.9945054945054945,
+      "npv": 0.8578199052132701,
+      "ppv": 0.0,
+      "mcc": -0.027950121860467785,
+      "auroc": 0.6523809523809524,
+      "auc_pr": 0.22376518381902583,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.6425438596491228,
+      "best_epoch": 1,
+      "accuracy": 0.8443396226415094,
+      "balanced_accuracy": 0.5195970695970696,
+      "precision": 0.2857142857142857,
+      "recall": 0.06666666666666667,
+      "sensitivity": 0.06666666666666667,
+      "f1_score": 0.10810810810810811,
+      "cohen_kappa": 0.057650862068965525,
+      "specificity": 0.9725274725274725,
+      "npv": 0.8634146341463415,
+      "ppv": 0.2857142857142857,
+      "mcc": 0.0764524665585686,
+      "auroc": 0.584065934065934,
+      "auc_pr": 0.18322807170082273,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7183641975308641,
+      "best_epoch": 10,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.513919413919414,
+      "precision": 0.5,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.0625,
+      "cohen_kappa": 0.0456182472989195,
+      "specificity": 0.9945054945054945,
+      "npv": 0.861904761904762,
+      "ppv": 0.5,
+      "mcc": 0.10037432122170813,
+      "auroc": 0.639010989010989,
+      "auc_pr": 0.21230654640184587,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.7049666419570051,
+      "best_epoch": 5,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.513919413919414,
+      "precision": 0.5,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.0625,
+      "cohen_kappa": 0.0456182472989195,
+      "specificity": 0.9945054945054945,
+      "npv": 0.861904761904762,
+      "ppv": 0.5,
+      "mcc": 0.10037432122170813,
+      "auroc": 0.6423076923076922,
+      "auc_pr": 0.20722976713462,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.7746478873239436,
+      "best_epoch": 3,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.513919413919414,
+      "precision": 0.5,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.0625,
+      "cohen_kappa": 0.0456182472989195,
+      "specificity": 0.9945054945054945,
+      "npv": 0.861904761904762,
+      "ppv": 0.5,
+      "mcc": 0.10037432122170813,
+      "auroc": 0.6038461538461538,
+      "auc_pr": 0.20001979502025163,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6243223443223443,
+      "std": 0.029010202749548075,
+      "min": 0.584065934065934,
+      "max": 0.6523809523809524
+    },
+    "auc_pr": {
+      "mean": 0.20530987281531318,
+      "std": 0.015073393805437969,
+      "min": 0.18322807170082273,
+      "max": 0.22376518381902583
+    },
+    "accuracy": {
+      "mean": 0.8547169811320755,
+      "std": 0.0061501909483044105,
+      "min": 0.8443396226415094,
+      "max": 0.8584905660377359
+    },
+    "balanced_accuracy": {
+      "mean": 0.5117216117216117,
+      "std": 0.008453725203548935,
+      "min": 0.49725274725274726,
+      "max": 0.5195970695970696
+    },
+    "f1_score": {
+      "mean": 0.05912162162162162,
+      "std": 0.038500916621761756,
+      "min": 0.0,
+      "max": 0.10810810810810811
+    },
+    "sensitivity": {
+      "mean": 0.03333333333333333,
+      "std": 0.023570226039551584,
+      "min": 0.0,
+      "max": 0.06666666666666667
+    },
+    "specificity": {
+      "mean": 0.9901098901098901,
+      "std": 0.009828870230768321,
+      "min": 0.9725274725274725,
+      "max": 0.9945054945054945
+    },
+    "mcc": {
+      "mean": 0.06992506167264503,
+      "std": 0.05568579439014031,
+      "min": -0.027950121860467785,
+      "max": 0.10037432122170813
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 212,
+    "ensemble_accuracy": 0.8584905660377359,
+    "majority_vote_accuracy": 0.8584905660377359,
+    "agreement_rate": 0.9716981132075472,
+    "class_0_samples": 182,
+    "class_0_ensemble_accuracy": 0.9945054945054945,
+    "class_1_samples": 30,
+    "class_1_ensemble_accuracy": 0.03333333333333333
+  },
+  "config": {
+    "model_name": "resnet18",
+    "mil_architecture": "acmil",
+    "dev_manifest": "data/manifests/resnet18_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "use_scheduler": true,
+      "scheduler_type": "cosine",
+      "n_branches": 5,
+      "top_k": 10,
+      "mask_ratio": 0.6,
+      "lambda_p": 1.0,
+      "lambda_d": 1.0,
+      "gate": true
+    }
+  }
+}

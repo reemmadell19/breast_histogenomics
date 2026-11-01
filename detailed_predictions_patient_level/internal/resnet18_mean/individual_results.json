@@ -1,0 +1,214 @@
+{
+  "model_folder": "retrained_models_patient_level/resnet18_mean_20261030_041314",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.6578947368421053,
+      "best_epoch": 1,
+      "accuracy": 0.728,
+      "balanced_accuracy": 0.514026402640264,
+      "precision": 0.2222222222222222,
+      "recall": 0.16666666666666666,
+      "sensitivity": 0.16666666666666666,
+      "f1_score": 0.19047619047619047,
+      "cohen_kappa": 0.03100775193798455,
+      "specificity": 0.8613861386138614,
+      "npv": 0.8130841121495327,
+      "ppv": 0.2222222222222222,
+      "mcc": 0.03147128410630961,
+      "auroc": 0.6117986798679869,
+      "auc_pr": 0.3101217516130149,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.5694444444444444,
+      "best_epoch": 1,
+      "accuracy": 0.752,
+      "balanced_accuracy": 0.5924092409240924,
+      "precision": 0.34782608695652173,
+      "recall": 0.3333333333333333,
+      "sensitivity": 0.3333333333333333,
+      "f1_score": 0.3404255319148936,
+      "cohen_kappa": 0.1878012995179208,
+      "specificity": 0.8514851485148515,
+      "npv": 0.8431372549019608,
+      "ppv": 0.34782608695652173,
+      "mcc": 0.1878657896769411,
+      "auroc": 0.5536303630363035,
+      "auc_pr": 0.3095755322852727,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.6126543209876543,
+      "best_epoch": 2,
+      "accuracy": 0.72,
+      "balanced_accuracy": 0.588490099009901,
+      "precision": 0.3103448275862069,
+      "recall": 0.375,
+      "sensitivity": 0.375,
+      "f1_score": 0.33962264150943394,
+      "cohen_kappa": 0.1639594878654691,
+      "specificity": 0.801980198019802,
+      "npv": 0.84375,
+      "ppv": 0.3103448275862069,
+      "mcc": 0.16514155473421624,
+      "auroc": 0.5639438943894389,
+      "auc_pr": 0.30141485491744147,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.631578947368421,
+      "best_epoch": 1,
+      "accuracy": 0.648,
+      "balanced_accuracy": 0.5757013201320131,
+      "precision": 0.2619047619047619,
+      "recall": 0.4583333333333333,
+      "sensitivity": 0.4583333333333333,
+      "f1_score": 0.3333333333333333,
+      "cohen_kappa": 0.11774141803015725,
+      "specificity": 0.693069306930693,
+      "npv": 0.8433734939759037,
+      "ppv": 0.2619047619047619,
+      "mcc": 0.126251360003465,
+      "auroc": 0.6163366336633663,
+      "auc_pr": 0.31141935124714387,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8287620459599703,
+      "best_epoch": 1,
+      "accuracy": 0.704,
+      "balanced_accuracy": 0.5785891089108911,
+      "precision": 0.2903225806451613,
+      "recall": 0.375,
+      "sensitivity": 0.375,
+      "f1_score": 0.32727272727272727,
+      "cohen_kappa": 0.14145164284388334,
+      "specificity": 0.7821782178217822,
+      "npv": 0.8404255319148937,
+      "ppv": 0.2903225806451613,
+      "mcc": 0.14335534631031802,
+      "auroc": 0.5577557755775577,
+      "auc_pr": 0.3055045515248404,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.5806930693069307,
+      "std": 0.030728923928206336,
+      "min": 0.5536303630363035,
+      "max": 0.6163366336633663
+    },
+    "auc_pr": {
+      "mean": 0.3076072083175427,
+      "std": 0.004107799507099123,
+      "min": 0.30141485491744147,
+      "max": 0.31141935124714387
+    },
+    "accuracy": {
+      "mean": 0.7104000000000001,
+      "std": 0.038946116622841864,
+      "min": 0.648,
+      "max": 0.752
+    },
+    "balanced_accuracy": {
+      "mean": 0.5698432343234323,
+      "std": 0.03195018156178421,
+      "min": 0.514026402640264,
+      "max": 0.5924092409240924
+    },
+    "f1_score": {
+      "mean": 0.3062260849013157,
+      "std": 0.06492444512933211,
+      "min": 0.19047619047619047,
+      "max": 0.3404255319148936
+    },
+    "sensitivity": {
+      "mean": 0.3416666666666667,
+      "std": 0.10785149254620653,
+      "min": 0.16666666666666666,
+      "max": 0.4583333333333333
+    },
+    "specificity": {
+      "mean": 0.7980198019801981,
+      "std": 0.06737039935130298,
+      "min": 0.693069306930693,
+      "max": 0.8613861386138614
+    },
+    "mcc": {
+      "mean": 0.13081706696625,
+      "std": 0.06016719605501181,
+      "min": 0.03147128410630961,
+      "max": 0.1878657896769411
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.712,
+    "majority_vote_accuracy": 0.736,
+    "agreement_rate": 0.808,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7920792079207921,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.375
+  },
+  "config": {
+    "model_name": "resnet18",
+    "mil_architecture": "mean",
+    "dev_manifest": "data/manifests/resnet18_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null
+    }
+  }
+}

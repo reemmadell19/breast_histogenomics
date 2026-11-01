@@ -1,0 +1,220 @@
+{
+  "model_folder": "retrained_models_patient_level/uni2-h_clam_20261030_025645",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7112573099415205,
+      "best_epoch": 1,
+      "accuracy": 0.776,
+      "balanced_accuracy": 0.7343234323432344,
+      "precision": 0.4444444444444444,
+      "recall": 0.6666666666666666,
+      "sensitivity": 0.6666666666666666,
+      "f1_score": 0.5333333333333333,
+      "cohen_kappa": 0.3936243936243936,
+      "specificity": 0.801980198019802,
+      "npv": 0.9101123595505618,
+      "ppv": 0.4444444444444444,
+      "mcc": 0.4076296536631192,
+      "auroc": 0.8077557755775577,
+      "auc_pr": 0.44576505413011414,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.6257309941520468,
+      "best_epoch": 1,
+      "accuracy": 0.688,
+      "balanced_accuracy": 0.648102310231023,
+      "precision": 0.32558139534883723,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.417910447761194,
+      "cohen_kappa": 0.22753921723974013,
+      "specificity": 0.7128712871287128,
+      "npv": 0.8780487804878049,
+      "ppv": 0.32558139534883723,
+      "mcc": 0.2455935645498723,
+      "auroc": 0.7429867986798679,
+      "auc_pr": 0.552066574387229,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7962962962962963,
+      "best_epoch": 1,
+      "accuracy": 0.744,
+      "balanced_accuracy": 0.6351072607260726,
+      "precision": 0.36666666666666664,
+      "recall": 0.4583333333333333,
+      "sensitivity": 0.4583333333333333,
+      "f1_score": 0.4074074074074074,
+      "cohen_kappa": 0.24670433145009407,
+      "specificity": 0.8118811881188119,
+      "npv": 0.8631578947368421,
+      "ppv": 0.36666666666666664,
+      "mcc": 0.2492025960490747,
+      "auroc": 0.7570132013201321,
+      "auc_pr": 0.43279468102211394,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.8954781319495921,
+      "best_epoch": 1,
+      "accuracy": 0.72,
+      "balanced_accuracy": 0.6679042904290429,
+      "precision": 0.358974358974359,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4444444444444444,
+      "cohen_kappa": 0.2711977344661003,
+      "specificity": 0.7524752475247525,
+      "npv": 0.8837209302325582,
+      "ppv": 0.358974358974359,
+      "mcc": 0.2854805784103667,
+      "auroc": 0.7095709570957095,
+      "auc_pr": 0.4812092573844286,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.7664936990363233,
+      "best_epoch": 1,
+      "accuracy": 0.816,
+      "balanced_accuracy": 0.7431930693069306,
+      "precision": 0.5172413793103449,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.5660377358490566,
+      "cohen_kappa": 0.45060194916873686,
+      "specificity": 0.8613861386138614,
+      "npv": 0.90625,
+      "ppv": 0.5172413793103449,
+      "mcc": 0.45385056650732153,
+      "auroc": 0.7528877887788779,
+      "auc_pr": 0.5787084299259678,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.7540429042904291,
+      "std": 0.03533843890425533,
+      "min": 0.7095709570957095,
+      "max": 0.8077557755775577
+    },
+    "auc_pr": {
+      "mean": 0.4981087993699707,
+      "std": 0.06461257263720087,
+      "min": 0.43279468102211394,
+      "max": 0.5787084299259678
+    },
+    "accuracy": {
+      "mean": 0.7487999999999999,
+      "std": 0.04950959502965057,
+      "min": 0.688,
+      "max": 0.816
+    },
+    "balanced_accuracy": {
+      "mean": 0.6857260726072607,
+      "std": 0.04989886425211014,
+      "min": 0.6351072607260726,
+      "max": 0.7431930693069306
+    },
+    "f1_score": {
+      "mean": 0.47382667375908716,
+      "std": 0.07149367310728712,
+      "min": 0.4074074074074074,
+      "max": 0.5660377358490566
+    },
+    "sensitivity": {
+      "mean": 0.5833333333333333,
+      "std": 0.07795119555779044,
+      "min": 0.4583333333333333,
+      "max": 0.6666666666666666
+    },
+    "specificity": {
+      "mean": 0.7881188118811882,
+      "std": 0.057134804143578265,
+      "min": 0.7128712871287128,
+      "max": 0.8613861386138614
+    },
+    "mcc": {
+      "mean": 0.3283513918359509,
+      "std": 0.09615921970477992,
+      "min": 0.2455935645498723,
+      "max": 0.45385056650732153
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.752,
+    "majority_vote_accuracy": 0.744,
+    "agreement_rate": 0.648,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7821782178217822,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.625
+  },
+  "config": {
+    "model_name": "uni2-h",
+    "mil_architecture": "clam",
+    "dev_manifest": "data/manifests/uni2-h_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 512,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 256,
+      "gate": true,
+      "use_instance_learning": true,
+      "k_sample": 8,
+      "instance_loss_fn": "svm",
+      "instance_loss_weight": 0.3
+    }
+  }
+}

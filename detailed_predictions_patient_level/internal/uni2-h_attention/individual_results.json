@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/uni2-h_attention_20261030_023957",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.6644736842105263,
+      "best_epoch": 1,
+      "accuracy": 0.704,
+      "balanced_accuracy": 0.6262376237623762,
+      "precision": 0.32432432432432434,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.39344262295081966,
+      "cohen_kappa": 0.20926654128910926,
+      "specificity": 0.7524752475247525,
+      "npv": 0.8636363636363636,
+      "ppv": 0.32432432432432434,
+      "mcc": 0.21784265243013695,
+      "auroc": 0.6757425742574258,
+      "auc_pr": 0.4208244467977518,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.7690058479532164,
+      "best_epoch": 3,
+      "accuracy": 0.728,
+      "balanced_accuracy": 0.6410891089108911,
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.41379310344827586,
+      "cohen_kappa": 0.24350302598789608,
+      "specificity": 0.7821782178217822,
+      "npv": 0.8681318681318682,
+      "ppv": 0.35294117647058826,
+      "mcc": 0.24976388396715107,
+      "auroc": 0.7512376237623762,
+      "auc_pr": 0.5718447864486469,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.8209876543209875,
+      "best_epoch": 5,
+      "accuracy": 0.728,
+      "balanced_accuracy": 0.6887376237623762,
+      "precision": 0.375,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.46875,
+      "cohen_kappa": 0.30098684210526316,
+      "specificity": 0.7524752475247525,
+      "npv": 0.8941176470588236,
+      "ppv": 0.375,
+      "mcc": 0.318724411422797,
+      "auroc": 0.7755775577557755,
+      "auc_pr": 0.5544325037102082,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.9303187546330615,
+      "best_epoch": 1,
+      "accuracy": 0.752,
+      "balanced_accuracy": 0.6877062706270627,
+      "precision": 0.4,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.4745762711864407,
+      "cohen_kappa": 0.31957857769973663,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8888888888888888,
+      "ppv": 0.4,
+      "mcc": 0.32932128980352676,
+      "auroc": 0.7858910891089109,
+      "auc_pr": 0.6229497404359937,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8072646404744255,
+      "best_epoch": 2,
+      "accuracy": 0.72,
+      "balanced_accuracy": 0.715552805280528,
+      "precision": 0.37777777777777777,
+      "recall": 0.7083333333333334,
+      "sensitivity": 0.7083333333333334,
+      "f1_score": 0.4927536231884058,
+      "cohen_kappa": 0.3232791956689869,
+      "specificity": 0.7227722772277227,
+      "npv": 0.9125,
+      "ppv": 0.37777777777777777,
+      "mcc": 0.3537518602370812,
+      "auroc": 0.7908415841584158,
+      "auc_pr": 0.5617134321379572,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.7558580858085808,
+      "std": 0.0473141835989231,
+      "min": 0.6757425742574258,
+      "max": 0.7908415841584158
+    },
+    "auc_pr": {
+      "mean": 0.5463529819061115,
+      "std": 0.075125779108237,
+      "min": 0.4208244467977518,
+      "max": 0.6229497404359937
+    },
+    "accuracy": {
+      "mean": 0.7263999999999999,
+      "std": 0.017343586710943056,
+      "min": 0.704,
+      "max": 0.752
+    },
+    "balanced_accuracy": {
+      "mean": 0.6718646864686469,
+      "std": 0.036990770984472364,
+      "min": 0.6262376237623762,
+      "max": 0.715552805280528
+    },
+    "f1_score": {
+      "mean": 0.4486631241547884,
+      "std": 0.042673668616104825,
+      "min": 0.39344262295081966,
+      "max": 0.4927536231884058
+    },
+    "sensitivity": {
+      "mean": 0.5833333333333334,
+      "std": 0.08838834764831846,
+      "min": 0.5,
+      "max": 0.7083333333333334
+    },
+    "specificity": {
+      "mean": 0.7603960396039604,
+      "std": 0.027474132525765586,
+      "min": 0.7227722772277227,
+      "max": 0.7920792079207921
+    },
+    "mcc": {
+      "mean": 0.29388081957213863,
+      "std": 0.05741489215799508,
+      "min": 0.21784265243013695,
+      "max": 0.3537518602370812
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.744,
+    "majority_vote_accuracy": 0.736,
+    "agreement_rate": 0.616,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7821782178217822,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "uni2-h",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/uni2-h_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

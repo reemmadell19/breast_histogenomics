@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/h-optimus_attention_20261030_021010",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.679093567251462,
+      "best_epoch": 1,
+      "accuracy": 0.728,
+      "balanced_accuracy": 0.6410891089108911,
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.41379310344827586,
+      "cohen_kappa": 0.24350302598789608,
+      "specificity": 0.7821782178217822,
+      "npv": 0.8681318681318682,
+      "ppv": 0.35294117647058826,
+      "mcc": 0.24976388396715107,
+      "auroc": 0.66996699669967,
+      "auc_pr": 0.4949427266812975,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.8318713450292398,
+      "best_epoch": 3,
+      "accuracy": 0.656,
+      "balanced_accuracy": 0.6759488448844885,
+      "precision": 0.32075471698113206,
+      "recall": 0.7083333333333334,
+      "sensitivity": 0.7083333333333334,
+      "f1_score": 0.44155844155844154,
+      "cohen_kappa": 0.24092642282163534,
+      "specificity": 0.6435643564356436,
+      "npv": 0.9027777777777778,
+      "ppv": 0.32075471698113206,
+      "mcc": 0.2804649149072952,
+      "auroc": 0.7491749174917491,
+      "auc_pr": 0.6055835085522199,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7800925925925926,
+      "best_epoch": 2,
+      "accuracy": 0.744,
+      "balanced_accuracy": 0.6668729372937294,
+      "precision": 0.38235294117647056,
+      "recall": 0.5416666666666666,
+      "sensitivity": 0.5416666666666666,
+      "f1_score": 0.4482758620689655,
+      "cohen_kappa": 0.2880028479886081,
+      "specificity": 0.7920792079207921,
+      "npv": 0.8791208791208791,
+      "ppv": 0.38235294117647056,
+      "mcc": 0.2954078686102708,
+      "auroc": 0.735973597359736,
+      "auc_pr": 0.5337560434775654,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.8902891030392883,
+      "best_epoch": 1,
+      "accuracy": 0.768,
+      "balanced_accuracy": 0.6976072607260726,
+      "precision": 0.42424242424242425,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.49122807017543857,
+      "cohen_kappa": 0.3457859592131385,
+      "specificity": 0.8118811881188119,
+      "npv": 0.8913043478260869,
+      "ppv": 0.42424242424242425,
+      "mcc": 0.35314114248955164,
+      "auroc": 0.7660891089108911,
+      "auc_pr": 0.504176682399678,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8465530022238695,
+      "best_epoch": 2,
+      "accuracy": 0.728,
+      "balanced_accuracy": 0.6887376237623762,
+      "precision": 0.375,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.46875,
+      "cohen_kappa": 0.30098684210526316,
+      "specificity": 0.7524752475247525,
+      "npv": 0.8941176470588236,
+      "ppv": 0.375,
+      "mcc": 0.318724411422797,
+      "auroc": 0.7112211221122111,
+      "auc_pr": 0.4404835145562863,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.7264851485148515,
+      "std": 0.03741865157706268,
+      "min": 0.66996699669967,
+      "max": 0.7660891089108911
+    },
+    "auc_pr": {
+      "mean": 0.5157884951334094,
+      "std": 0.060469408764736436,
+      "min": 0.4404835145562863,
+      "max": 0.6055835085522199
+    },
+    "accuracy": {
+      "mean": 0.7247999999999999,
+      "std": 0.04179952152836201,
+      "min": 0.656,
+      "max": 0.768
+    },
+    "balanced_accuracy": {
+      "mean": 0.6740511551155115,
+      "std": 0.021864394574301664,
+      "min": 0.6410891089108911,
+      "max": 0.6976072607260726
+    },
+    "f1_score": {
+      "mean": 0.45272109545022426,
+      "std": 0.029152471535786904,
+      "min": 0.41379310344827586,
+      "max": 0.49122807017543857
+    },
+    "sensitivity": {
+      "mean": 0.5916666666666667,
+      "std": 0.08014743359029729,
+      "min": 0.5,
+      "max": 0.7083333333333334
+    },
+    "specificity": {
+      "mean": 0.7564356435643564,
+      "std": 0.06663888582361918,
+      "min": 0.6435643564356436,
+      "max": 0.8118811881188119
+    },
+    "mcc": {
+      "mean": 0.29950044427941314,
+      "std": 0.03905032459205929,
+      "min": 0.24976388396715107,
+      "max": 0.35314114248955164
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.728,
+    "majority_vote_accuracy": 0.72,
+    "agreement_rate": 0.688,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.7623762376237624,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "h-optimus",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/h-optimus_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

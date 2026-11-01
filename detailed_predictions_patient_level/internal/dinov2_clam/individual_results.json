@@ -1,0 +1,220 @@
+{
+  "model_folder": "retrained_models_patient_level/dinov2_clam_20261030_044129",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.6461988304093568,
+      "best_epoch": 3,
+      "accuracy": 0.52,
+      "balanced_accuracy": 0.5282590759075907,
+      "precision": 0.20967741935483872,
+      "recall": 0.5416666666666666,
+      "sensitivity": 0.5416666666666666,
+      "f1_score": 0.3023255813953488,
+      "cohen_kappa": 0.03524569076408535,
+      "specificity": 0.5148514851485149,
+      "npv": 0.8253968253968254,
+      "ppv": 0.20967741935483872,
+      "mcc": 0.044523381381891755,
+      "auroc": 0.5903465346534653,
+      "auc_pr": 0.2837226128033223,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.44225146198830406,
+      "best_epoch": 1,
+      "accuracy": 0.24,
+      "balanced_accuracy": 0.48205445544554454,
+      "precision": 0.18584070796460178,
+      "recall": 0.875,
+      "sensitivity": 0.875,
+      "f1_score": 0.30656934306569344,
+      "cohen_kappa": -0.014870523886847176,
+      "specificity": 0.0891089108910891,
+      "npv": 0.75,
+      "ppv": 0.18584070796460178,
+      "mcc": -0.04798694476216542,
+      "auroc": 0.5445544554455446,
+      "auc_pr": 0.28989780413947713,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.49922839506172845,
+      "best_epoch": 5,
+      "accuracy": 0.512,
+      "balanced_accuracy": 0.5233085808580857,
+      "precision": 0.20634920634920634,
+      "recall": 0.5416666666666666,
+      "sensitivity": 0.5416666666666666,
+      "f1_score": 0.2988505747126437,
+      "cohen_kappa": 0.028786141892752637,
+      "specificity": 0.504950495049505,
+      "npv": 0.8225806451612904,
+      "ppv": 0.20634920634920634,
+      "mcc": 0.03672366493542897,
+      "auroc": 0.523927392739274,
+      "auc_pr": 0.21192930832633833,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.6256486286137879,
+      "best_epoch": 4,
+      "accuracy": 0.488,
+      "balanced_accuracy": 0.49257425742574257,
+      "precision": 0.1875,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.2727272727272727,
+      "cohen_kappa": -0.00908173562058523,
+      "specificity": 0.48514851485148514,
+      "npv": 0.8032786885245902,
+      "ppv": 0.1875,
+      "mcc": -0.011702571103260975,
+      "auroc": 0.5507425742574258,
+      "auc_pr": 0.2221484086980263,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.7746478873239435,
+      "best_epoch": 4,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5142326732673268,
+      "precision": 0.20454545454545456,
+      "recall": 0.375,
+      "sensitivity": 0.375,
+      "f1_score": 0.2647058823529412,
+      "cohen_kappa": 0.02160300563556672,
+      "specificity": 0.6534653465346535,
+      "npv": 0.8148148148148148,
+      "ppv": 0.20454545454545456,
+      "mcc": 0.02347545050354308,
+      "auroc": 0.5721947194719472,
+      "auc_pr": 0.25837011507665614,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.5563531353135314,
+      "std": 0.025635049301766147,
+      "min": 0.523927392739274,
+      "max": 0.5903465346534653
+    },
+    "auc_pr": {
+      "mean": 0.25321364980876404,
+      "std": 0.03525818767650886,
+      "min": 0.21192930832633833,
+      "max": 0.28989780413947713
+    },
+    "accuracy": {
+      "mean": 0.472,
+      "std": 0.1363524843924745,
+      "min": 0.24,
+      "max": 0.6
+    },
+    "balanced_accuracy": {
+      "mean": 0.5080858085808581,
+      "std": 0.019966954081726312,
+      "min": 0.48205445544554454,
+      "max": 0.5282590759075907
+    },
+    "f1_score": {
+      "mean": 0.28903573085077994,
+      "std": 0.018962371813190212,
+      "min": 0.2647058823529412,
+      "max": 0.30656934306569344
+    },
+    "sensitivity": {
+      "mean": 0.5666666666666667,
+      "std": 0.18540496217739158,
+      "min": 0.375,
+      "max": 0.875
+    },
+    "specificity": {
+      "mean": 0.44950495049504957,
+      "std": 0.21219094596438343,
+      "min": 0.0891089108910891,
+      "max": 0.6534653465346535
+    },
+    "mcc": {
+      "mean": 0.009006596191087481,
+      "std": 0.03845828582893021,
+      "min": -0.04798694476216542,
+      "max": 0.044523381381891755
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.536,
+    "majority_vote_accuracy": 0.496,
+    "agreement_rate": 0.248,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.5247524752475248,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "dinov2",
+    "mil_architecture": "clam",
+    "dev_manifest": "data/manifests/dinov2_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 512,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 256,
+      "gate": true,
+      "use_instance_learning": true,
+      "k_sample": 8,
+      "instance_loss_fn": "svm",
+      "instance_loss_weight": 0.3
+    }
+  }
+}

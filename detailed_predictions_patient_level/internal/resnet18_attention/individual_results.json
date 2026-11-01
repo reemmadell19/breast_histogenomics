@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/resnet18_attention_20261030_043338",
+  "cohort": "internal",
+  "n_samples": 125,
+  "n_high_risk": 24,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7419590643274854,
+      "best_epoch": 5,
+      "accuracy": 0.576,
+      "balanced_accuracy": 0.5946782178217822,
+      "precision": 0.2542372881355932,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.3614457831325301,
+      "cohen_kappa": 0.12170224048786948,
+      "specificity": 0.5643564356435643,
+      "npv": 0.8636363636363636,
+      "ppv": 0.2542372881355932,
+      "mcc": 0.14939924549952877,
+      "auroc": 0.6122112211221122,
+      "auc_pr": 0.32968837403595297,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.5497076023391813,
+      "best_epoch": 3,
+      "accuracy": 0.584,
+      "balanced_accuracy": 0.551980198019802,
+      "precision": 0.23076923076923078,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.3157894736842105,
+      "cohen_kappa": 0.0719588806396344,
+      "specificity": 0.6039603960396039,
+      "npv": 0.8356164383561644,
+      "ppv": 0.23076923076923078,
+      "mcc": 0.08307514943489533,
+      "auroc": 0.5408415841584158,
+      "auc_pr": 0.2641585976022206,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7708333333333333,
+      "best_epoch": 7,
+      "accuracy": 0.648,
+      "balanced_accuracy": 0.5915841584158417,
+      "precision": 0.2727272727272727,
+      "recall": 0.5,
+      "sensitivity": 0.5,
+      "f1_score": 0.35294117647058826,
+      "cohen_kappa": 0.1390106449592987,
+      "specificity": 0.6831683168316832,
+      "npv": 0.8518518518518519,
+      "ppv": 0.2727272727272727,
+      "mcc": 0.1510594206314946,
+      "auroc": 0.648102310231023,
+      "auc_pr": 0.3174591384488868,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.6582653817642699,
+      "best_epoch": 1,
+      "accuracy": 0.48,
+      "balanced_accuracy": 0.5352722772277227,
+      "precision": 0.2112676056338028,
+      "recall": 0.625,
+      "sensitivity": 0.625,
+      "f1_score": 0.3157894736842105,
+      "cohen_kappa": 0.0403921105468289,
+      "specificity": 0.44554455445544555,
+      "npv": 0.8333333333333334,
+      "ppv": 0.2112676056338028,
+      "mcc": 0.05609236461169327,
+      "auroc": 0.6064356435643564,
+      "auc_pr": 0.3048405366421396,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8495181616011861,
+      "best_epoch": 5,
+      "accuracy": 0.544,
+      "balanced_accuracy": 0.5589933993399341,
+      "precision": 0.22950819672131148,
+      "recall": 0.5833333333333334,
+      "sensitivity": 0.5833333333333334,
+      "f1_score": 0.32941176470588235,
+      "cohen_kappa": 0.07431466805248788,
+      "specificity": 0.5346534653465347,
+      "npv": 0.84375,
+      "ppv": 0.22950819672131148,
+      "mcc": 0.09297042598701774,
+      "auroc": 0.6349009900990099,
+      "auc_pr": 0.3210717616207249,
+      "n_samples": 125,
+      "n_positive": 24,
+      "n_negative": 101,
+      "class_ratio": 0.192
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6084983498349834,
+      "std": 0.041415731323164874,
+      "min": 0.5408415841584158,
+      "max": 0.648102310231023
+    },
+    "auc_pr": {
+      "mean": 0.3074436816699849,
+      "std": 0.0257935803199158,
+      "min": 0.2641585976022206,
+      "max": 0.32968837403595297
+    },
+    "accuracy": {
+      "mean": 0.5664,
+      "std": 0.06129274019000946,
+      "min": 0.48,
+      "max": 0.648
+    },
+    "balanced_accuracy": {
+      "mean": 0.5665016501650165,
+      "std": 0.025814585615421413,
+      "min": 0.5352722772277227,
+      "max": 0.5946782178217822
+    },
+    "f1_score": {
+      "mean": 0.3350755343354843,
+      "std": 0.021157467640434444,
+      "min": 0.3157894736842105,
+      "max": 0.3614457831325301
+    },
+    "sensitivity": {
+      "mean": 0.5666666666666667,
+      "std": 0.06319062870042959,
+      "min": 0.5,
+      "max": 0.625
+    },
+    "specificity": {
+      "mean": 0.5663366336633663,
+      "std": 0.08755521176013524,
+      "min": 0.44554455445544555,
+      "max": 0.6831683168316832
+    },
+    "mcc": {
+      "mean": 0.10651932123292593,
+      "std": 0.042126559518027996,
+      "min": 0.05609236461169327,
+      "max": 0.1510594206314946
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 125,
+    "ensemble_accuracy": 0.624,
+    "majority_vote_accuracy": 0.576,
+    "agreement_rate": 0.384,
+    "class_0_samples": 101,
+    "class_0_ensemble_accuracy": 0.6336633663366337,
+    "class_1_samples": 24,
+    "class_1_ensemble_accuracy": 0.5833333333333334
+  },
+  "config": {
+    "model_name": "resnet18",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/resnet18_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

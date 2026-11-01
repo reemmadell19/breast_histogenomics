@@ -1,0 +1,215 @@
+{
+  "model_folder": "retrained_models_patient_level/resnet18_attention_20261030_043338",
+  "cohort": "ecu",
+  "n_samples": 212,
+  "n_high_risk": 30,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7419590643274854,
+      "best_epoch": 5,
+      "accuracy": 0.8537735849056604,
+      "balanced_accuracy": 0.49725274725274726,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": -0.00921375921375911,
+      "specificity": 0.9945054945054945,
+      "npv": 0.8578199052132701,
+      "ppv": 0.0,
+      "mcc": -0.027950121860467785,
+      "auroc": 0.6393772893772893,
+      "auc_pr": 0.20836319591731184,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.5497076023391813,
+      "best_epoch": 3,
+      "accuracy": 0.7971698113207547,
+      "balanced_accuracy": 0.506043956043956,
+      "precision": 0.15789473684210525,
+      "recall": 0.1,
+      "sensitivity": 0.1,
+      "f1_score": 0.12244897959183673,
+      "cohen_kappa": 0.014273356401384052,
+      "specificity": 0.9120879120879121,
+      "npv": 0.8601036269430051,
+      "ppv": 0.15789473684210525,
+      "mcc": 0.014750004717310286,
+      "auroc": 0.5012820512820513,
+      "auc_pr": 0.14929972240287992,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7708333333333333,
+      "best_epoch": 7,
+      "accuracy": 0.8537735849056604,
+      "balanced_accuracy": 0.49725274725274726,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": -0.00921375921375911,
+      "specificity": 0.9945054945054945,
+      "npv": 0.8578199052132701,
+      "ppv": 0.0,
+      "mcc": -0.027950121860467785,
+      "auroc": 0.6474358974358975,
+      "auc_pr": 0.23619734128930925,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.6582653817642699,
+      "best_epoch": 1,
+      "accuracy": 0.7735849056603774,
+      "balanced_accuracy": 0.5201465201465202,
+      "precision": 0.17857142857142858,
+      "recall": 0.16666666666666666,
+      "sensitivity": 0.16666666666666666,
+      "f1_score": 0.1724137931034483,
+      "cohen_kappa": 0.04144687264506397,
+      "specificity": 0.8736263736263736,
+      "npv": 0.8641304347826086,
+      "ppv": 0.17857142857142858,
+      "mcc": 0.04147996987356819,
+      "auroc": 0.6329670329670329,
+      "auc_pr": 0.2260030937977771,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8495181616011861,
+      "best_epoch": 5,
+      "accuracy": 0.8490566037735849,
+      "balanced_accuracy": 0.5362637362637362,
+      "precision": 0.375,
+      "recall": 0.1,
+      "sensitivity": 0.1,
+      "f1_score": 0.15789473684210525,
+      "cohen_kappa": 0.10454065469904972,
+      "specificity": 0.9725274725274725,
+      "npv": 0.8676470588235294,
+      "ppv": 0.375,
+      "mcc": 0.13265963173737344,
+      "auroc": 0.6344322344322345,
+      "auc_pr": 0.24158491390908648,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6110989010989011,
+      "std": 0.06164909708576674,
+      "min": 0.5012820512820513,
+      "max": 0.6474358974358975
+    },
+    "auc_pr": {
+      "mean": 0.21228965346327291,
+      "std": 0.037419903632413855,
+      "min": 0.14929972240287992,
+      "max": 0.24158491390908648
+    },
+    "accuracy": {
+      "mean": 0.8254716981132075,
+      "std": 0.03758815436440854,
+      "min": 0.7735849056603774,
+      "max": 0.8537735849056604
+    },
+    "balanced_accuracy": {
+      "mean": 0.5113919413919413,
+      "std": 0.016760693589531674,
+      "min": 0.49725274725274726,
+      "max": 0.5362637362637362
+    },
+    "f1_score": {
+      "mean": 0.09055150190747806,
+      "std": 0.08463619806167214,
+      "min": 0.0,
+      "max": 0.1724137931034483
+    },
+    "sensitivity": {
+      "mean": 0.07333333333333333,
+      "std": 0.07226494462892932,
+      "min": 0.0,
+      "max": 0.16666666666666666
+    },
+    "specificity": {
+      "mean": 0.9494505494505494,
+      "std": 0.05417036283018128,
+      "min": 0.8736263736263736,
+      "max": 0.9945054945054945
+    },
+    "mcc": {
+      "mean": 0.026597872521463266,
+      "std": 0.06626068393711743,
+      "min": -0.027950121860467785,
+      "max": 0.13265963173737344
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 212,
+    "ensemble_accuracy": 0.8584905660377359,
+    "majority_vote_accuracy": 0.8584905660377359,
+    "agreement_rate": 0.8349056603773585,
+    "class_0_samples": 182,
+    "class_0_ensemble_accuracy": 0.9945054945054945,
+    "class_1_samples": 30,
+    "class_1_ensemble_accuracy": 0.03333333333333333
+  },
+  "config": {
+    "model_name": "resnet18",
+    "mil_architecture": "attention",
+    "dev_manifest": "data/manifests/resnet18_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0002,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null,
+      "attention_hidden_dim": 128
+    }
+  }
+}

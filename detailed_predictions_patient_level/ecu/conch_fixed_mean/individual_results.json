@@ -1,0 +1,214 @@
+{
+  "model_folder": "retrained_models_patient_level/conch_fixed_mean_20261030_054738",
+  "cohort": "ecu",
+  "n_samples": 212,
+  "n_high_risk": 30,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7507309941520467,
+      "best_epoch": 18,
+      "accuracy": 0.8490566037735849,
+      "balanced_accuracy": 0.5084249084249084,
+      "precision": 0.25,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.058823529411764705,
+      "cohen_kappa": 0.02640642939150395,
+      "specificity": 0.9835164835164835,
+      "npv": 0.8605769230769231,
+      "ppv": 0.25,
+      "mcc": 0.04316481091887742,
+      "auroc": 0.6479853479853479,
+      "auc_pr": 0.21099922852749448,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.7463450292397661,
+      "best_epoch": 23,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.513919413919414,
+      "precision": 0.5,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.0625,
+      "cohen_kappa": 0.0456182472989195,
+      "specificity": 0.9945054945054945,
+      "npv": 0.861904761904762,
+      "ppv": 0.5,
+      "mcc": 0.10037432122170813,
+      "auroc": 0.6582417582417582,
+      "auc_pr": 0.2177814483402154,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.7152777777777778,
+      "best_epoch": 14,
+      "accuracy": 0.8490566037735849,
+      "balanced_accuracy": 0.5084249084249084,
+      "precision": 0.25,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.058823529411764705,
+      "cohen_kappa": 0.02640642939150395,
+      "specificity": 0.9835164835164835,
+      "npv": 0.8605769230769231,
+      "ppv": 0.25,
+      "mcc": 0.04316481091887742,
+      "auroc": 0.6078754578754579,
+      "auc_pr": 0.1880619883968701,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.838398813936249,
+      "best_epoch": 52,
+      "accuracy": 0.8207547169811321,
+      "balanced_accuracy": 0.4919413919413919,
+      "precision": 0.1,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.05,
+      "cohen_kappa": -0.022335025380710638,
+      "specificity": 0.9505494505494505,
+      "npv": 0.8564356435643564,
+      "ppv": 0.1,
+      "mcc": -0.026497851755957542,
+      "auroc": 0.6470695970695971,
+      "auc_pr": 0.22507898161310042,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.8220904373610081,
+      "best_epoch": 19,
+      "accuracy": 0.5188679245283019,
+      "balanced_accuracy": 0.5388278388278388,
+      "precision": 0.16037735849056603,
+      "recall": 0.5666666666666667,
+      "sensitivity": 0.5666666666666667,
+      "f1_score": 0.25,
+      "cohen_kappa": 0.037735849056603765,
+      "specificity": 0.510989010989011,
+      "npv": 0.8773584905660378,
+      "ppv": 0.16037735849056603,
+      "mcc": 0.05413319619607668,
+      "auroc": 0.6001831501831502,
+      "auc_pr": 0.19746426959601998,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6322710622710622,
+      "std": 0.02629254681884382,
+      "min": 0.6001831501831502,
+      "max": 0.6582417582417582
+    },
+    "auc_pr": {
+      "mean": 0.2078771832947401,
+      "std": 0.015040064980324204,
+      "min": 0.1880619883968701,
+      "max": 0.22507898161310042
+    },
+    "accuracy": {
+      "mean": 0.779245283018868,
+      "std": 0.1462416303709111,
+      "min": 0.5188679245283019,
+      "max": 0.8584905660377359
+    },
+    "balanced_accuracy": {
+      "mean": 0.5123076923076922,
+      "std": 0.01696211978184706,
+      "min": 0.4919413919413919,
+      "max": 0.5388278388278388
+    },
+    "f1_score": {
+      "mean": 0.09602941176470589,
+      "std": 0.0861951646055861,
+      "min": 0.05,
+      "max": 0.25
+    },
+    "sensitivity": {
+      "mean": 0.13999999999999999,
+      "std": 0.23851391759997756,
+      "min": 0.03333333333333333,
+      "max": 0.5666666666666667
+    },
+    "specificity": {
+      "mean": 0.8846153846153847,
+      "std": 0.2095129226916222,
+      "min": 0.510989010989011,
+      "max": 0.9945054945054945
+    },
+    "mcc": {
+      "mean": 0.04286785749991642,
+      "std": 0.04540286116799649,
+      "min": -0.026497851755957542,
+      "max": 0.10037432122170813
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 212,
+    "ensemble_accuracy": 0.8349056603773585,
+    "majority_vote_accuracy": 0.8443396226415094,
+    "agreement_rate": 0.5094339622641509,
+    "class_0_samples": 182,
+    "class_0_ensemble_accuracy": 0.967032967032967,
+    "class_1_samples": 30,
+    "class_1_ensemble_accuracy": 0.03333333333333333
+  },
+  "config": {
+    "model_name": "conch_fixed",
+    "mil_architecture": "mean",
+    "dev_manifest": "data/manifests/conch_fixed_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "use_scheduler": false,
+      "scheduler_type": null
+    }
+  }
+}

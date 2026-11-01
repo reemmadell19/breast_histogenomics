@@ -1,0 +1,220 @@
+{
+  "model_folder": "retrained_models_patient_level/virchow2_acmil_20261030_024359",
+  "cohort": "ecu",
+  "n_samples": 212,
+  "n_high_risk": 30,
+  "label_rule": "RSHigh_classic (H if RS > 25)",
+  "n_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "val_auroc": 0.7660818713450293,
+      "best_epoch": 3,
+      "accuracy": 0.8584905660377359,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sensitivity": 0.0,
+      "f1_score": 0.0,
+      "cohen_kappa": 0.0,
+      "specificity": 1.0,
+      "npv": 0.8584905660377359,
+      "ppv": 0.0,
+      "mcc": 0.0,
+      "auroc": 0.6492673992673993,
+      "auc_pr": 0.2965800708398826,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 2,
+      "val_auroc": 0.7076023391812866,
+      "best_epoch": 2,
+      "accuracy": 0.8537735849056604,
+      "balanced_accuracy": 0.539010989010989,
+      "precision": 0.42857142857142855,
+      "recall": 0.1,
+      "sensitivity": 0.1,
+      "f1_score": 0.16216216216216217,
+      "cohen_kappa": 0.11476293103448276,
+      "specificity": 0.978021978021978,
+      "npv": 0.8682926829268293,
+      "ppv": 0.42857142857142855,
+      "mcc": 0.15219042408387956,
+      "auroc": 0.7195970695970696,
+      "auc_pr": 0.3172846895397547,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 3,
+      "val_auroc": 0.8302469135802469,
+      "best_epoch": 7,
+      "accuracy": 0.8632075471698113,
+      "balanced_accuracy": 0.5166666666666667,
+      "precision": 1.0,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.06451612903225806,
+      "cohen_kappa": 0.05589680589680601,
+      "specificity": 1.0,
+      "npv": 0.8625592417061612,
+      "ppv": 1.0,
+      "mcc": 0.16956407262017123,
+      "auroc": 0.6309523809523809,
+      "auc_pr": 0.22101884750664774,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 4,
+      "val_auroc": 0.8576723498888066,
+      "best_epoch": 6,
+      "accuracy": 0.7971698113207547,
+      "balanced_accuracy": 0.5338827838827839,
+      "precision": 0.21739130434782608,
+      "recall": 0.16666666666666666,
+      "sensitivity": 0.16666666666666666,
+      "f1_score": 0.18867924528301888,
+      "cohen_kappa": 0.07508116883116878,
+      "specificity": 0.9010989010989011,
+      "npv": 0.8677248677248677,
+      "ppv": 0.21739130434782608,
+      "mcc": 0.07594699287356846,
+      "auroc": 0.6525641025641026,
+      "auc_pr": 0.21275177839923348,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    },
+    {
+      "fold": 5,
+      "val_auroc": 0.7954040029651595,
+      "best_epoch": 3,
+      "accuracy": 0.8632075471698113,
+      "balanced_accuracy": 0.5166666666666667,
+      "precision": 1.0,
+      "recall": 0.03333333333333333,
+      "sensitivity": 0.03333333333333333,
+      "f1_score": 0.06451612903225806,
+      "cohen_kappa": 0.05589680589680601,
+      "specificity": 1.0,
+      "npv": 0.8625592417061612,
+      "ppv": 1.0,
+      "mcc": 0.16956407262017123,
+      "auroc": 0.6815018315018315,
+      "auc_pr": 0.2516016555471594,
+      "n_samples": 212,
+      "n_positive": 30,
+      "n_negative": 182,
+      "class_ratio": 0.14150943396226415
+    }
+  ],
+  "summary_statistics": {
+    "auroc": {
+      "mean": 0.6667765567765567,
+      "std": 0.034636600277956814,
+      "min": 0.6309523809523809,
+      "max": 0.7195970695970696
+    },
+    "auc_pr": {
+      "mean": 0.2598474083665355,
+      "std": 0.045940117819226294,
+      "min": 0.21275177839923348,
+      "max": 0.3172846895397547
+    },
+    "accuracy": {
+      "mean": 0.8471698113207549,
+      "std": 0.028223160946512435,
+      "min": 0.7971698113207547,
+      "max": 0.8632075471698113
+    },
+    "balanced_accuracy": {
+      "mean": 0.5212454212454212,
+      "std": 0.015561300101064145,
+      "min": 0.5,
+      "max": 0.539010989010989
+    },
+    "f1_score": {
+      "mean": 0.09597473310193944,
+      "std": 0.077726024081945,
+      "min": 0.0,
+      "max": 0.18867924528301888
+    },
+    "sensitivity": {
+      "mean": 0.06666666666666667,
+      "std": 0.06666666666666667,
+      "min": 0.0,
+      "max": 0.16666666666666666
+    },
+    "specificity": {
+      "mean": 0.9758241758241759,
+      "std": 0.04284305206509434,
+      "min": 0.9010989010989011,
+      "max": 1.0
+    },
+    "mcc": {
+      "mean": 0.1134531124395581,
+      "std": 0.07428959675710205,
+      "min": 0.0,
+      "max": 0.16956407262017123
+    }
+  },
+  "prediction_summary": {
+    "total_samples": 212,
+    "ensemble_accuracy": 0.8632075471698113,
+    "majority_vote_accuracy": 0.8632075471698113,
+    "agreement_rate": 0.8632075471698113,
+    "class_0_samples": 182,
+    "class_0_ensemble_accuracy": 1.0,
+    "class_1_samples": 30,
+    "class_1_ensemble_accuracy": 0.03333333333333333
+  },
+  "config": {
+    "model_name": "virchow2",
+    "mil_architecture": "acmil",
+    "dev_manifest": "data/manifests/virchow2_dev.csv",
+    "label_column": "RSHigh_classic",
+    "split_level": "patient",
+    "global_config": {
+      "num_epochs": 100,
+      "batch_size": 1,
+      "optimizer_type": "adam",
+      "use_class_balancing": true,
+      "use_gradient_clip": true,
+      "gradient_clip_val": 1.0,
+      "focal_loss": {
+        "gamma": 2.0,
+        "alpha": [
+          0.25,
+          0.75
+        ]
+      },
+      "n_folds": 5,
+      "random_seed": 42,
+      "use_early_stopping": true,
+      "patience": 15
+    },
+    "architecture_specific_params": {
+      "hidden_dim": 256,
+      "dropout": 0.25,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "use_scheduler": true,
+      "scheduler_type": "cosine",
+      "n_branches": 5,
+      "top_k": 10,
+      "mask_ratio": 0.6,
+      "lambda_p": 1.0,
+      "lambda_d": 1.0,
+      "gate": true
+    }
+  }
+}
